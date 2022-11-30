@@ -1,0 +1,14 @@
+#! /bin/bash
+# This script must be sourced from within a shell
+# and not executed. For instance with:
+# 
+# . path/to/that/script
+env_dir="folder/Python/env"
+
+main() {
+	cd
+	source "./Desktop/$env_dir/$1/bin/activate"
+	cd - 1>/dev/null
+}
+
+main "$1"

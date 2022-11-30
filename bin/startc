@@ -1,0 +1,10 @@
+#! /bin/bash
+
+main() {
+	for path in "$@"; do
+		gcc $path && ./a.out && rm ./a.out;
+	done
+
+}
+
+main "$@"

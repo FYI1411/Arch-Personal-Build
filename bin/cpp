@@ -1,0 +1,11 @@
+#! /bin/bash
+main() {
+	for file in "$@"; do
+	    gcc $file -lm -lstdc++ -o main.o || echo "failed to run $file"
+		echo "running $file with cpp command"
+		./main.o
+		rm main.o
+	done
+}
+
+main $@

@@ -1,0 +1,8 @@
+if [ -z "$1" ]
+	then
+    set -- "auto commit from gitp command"
+fi
+
+git status
+git add -A && git commit -m "$1"
+pass -c github && git push && git status

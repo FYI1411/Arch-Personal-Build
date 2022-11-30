@@ -1,0 +1,26 @@
+#!/bin/bash
+filecolor="$(tput setaf 1)";
+dircolor="$(tput setaf 3)";
+bold="$(tput bold)";
+reset="$(tput sgr0)";
+#open a program via c/ drive
+main() {
+	if [[ ! $# -eq 0 ]]; then
+		for i in $@; do
+			if [[ -f $i && -x $i ]]; then
+				cmd.exe /C start $i;
+			else
+				error="${bold}FILE: $reset";
+				error+="${filecolor}$i $reset";
+				error+="not found or can't be executed, ";
+				error+="${bold}DIRNAME: $reset";
+				error+="${dircolor}$0 $reset";
+				echo $error;
+			fi;
+		done;
+	else
+		cmd.exe /C start;
+	fi;
+};
+
+main "$@";

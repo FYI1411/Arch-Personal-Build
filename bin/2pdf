@@ -1,0 +1,6 @@
+#!/bin/bash
+main() {
+	soffice --convert-to pdf:writer_pdf_Export $@
+}
+
+main "$@"

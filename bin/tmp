@@ -1,0 +1,27 @@
+#! /bin/bash
+TMP_FOLDER="tmp"
+MIN_DAYS="7"
+
+if [[ ! -d ~/$TMP_FOLDER/ ]]; then
+	echo "can't find ~/$TMP_FOLDER/"
+	read -p "mkdir ~/$TMP_FOLDER/?[Y|n] " -n 1 -r $opt && echo
+	if [[ $REPLY =~ ^[Yy]$ ]]; then
+		mkdir ~/$TMP_FOLDER/ || exit 1 
+	else
+		exit 1
+	fi
+fi
+
+main() {
+	for file in "$@"; do
+	    mv $file ~/$TMP_FOLDER/ || echo "failed to tmp $file"
+	done
+}
+
+if [[ "$1" == "-c" ]]; then
+	find ~/$TMP_FOLDER/ -mindepth 1 -maxdepth 1 -mtime +$MIN_DAYS -exec rm -Rf {} +
+else
+	main "$1"
+fi
+
+main "${@:2}"
