@@ -181,6 +181,7 @@ screens = [
 				widget.Clipboard(),
 				widget.Sep(linewidth=2),
 				widget.Volume(background='#1d7def'),
+				widget.Battery(background='#00008B', format='{percent:2.0%}'),
 				widget.Systray(background='#000000'),
 				widget.Clock(background='#000000', format='%H:%M %d-%m'),
 				widget.Sep(background='#000000', linewidth=0, padding=2),
