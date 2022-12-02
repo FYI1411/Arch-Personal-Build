@@ -36,3 +36,5 @@ emacs
 ripgrep
 fd
 amd-ucode
+nvidia
+nvidia-utils
