@@ -40,3 +40,4 @@ nvidia
 nvidia-utils
 rsync
 reflector
+cbatticon

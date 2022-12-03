@@ -56,4 +56,5 @@ fcitx5 &
 # ~/bin/livewp &
 nitrogen --restore &
 pit &
+cbatticon &
 exec /usr/bin/qtile start
