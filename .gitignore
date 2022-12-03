@@ -34,6 +34,7 @@ tmp/*
 debug.log
 .vscode
 .emacs.d/
+.doom.d/
 .config/pavucontrol.ini
 .config/pulse/
 .config/QtProject.conf
