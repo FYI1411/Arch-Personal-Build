@@ -86,9 +86,9 @@ keys = [
         desc="Spawn a command using a prompt widget"),
 	
 	# Sound config shortcuts
-	Key([mod], "m", lazy.spawn("amixer -q set Master toggle")),
-    Key([mod], "F8", lazy.spawn("amixer -c 0 sset Master 1- unmute")),
-    Key([mod], "F9", lazy.spawn("amixer -c 0 sset Master 1+ unmute")),
+	Key([mod], "F1", lazy.spawn("amixer -q set Master toggle")),
+    Key([mod], "F2", lazy.spawn("amixer -c 2 sset Master 1- unmute")),
+    Key([mod], "F3", lazy.spawn("amixer -c 2 sset Master 1+ unmute")),
 	
 	# live wallpaper shortcuts
 	Key([mod], "q", lazy.spawn("livewp")),
