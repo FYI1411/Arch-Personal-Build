@@ -113,8 +113,8 @@ apps[4] = "libreoffice"
 apps[5] = "simplescreenrecorder"
 apps[6] = "pavucontrol"
 apps[7] = terminal + "ncdu"
-apps[8] = terminal + "bpytop"
-apps[9] = terminal + "rtorrent"
+apps[8] = terminal + "nvtop"
+apps[9] = terminal + "bpytop"
 
 for i, app in enumerate(apps):
 	keys.extend([
