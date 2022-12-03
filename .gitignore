@@ -56,3 +56,4 @@ debug.log
 .config/fcitx*
 .config/systemd/
 .config/bpytop/
+.config/noisetorch
