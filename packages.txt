@@ -38,3 +38,5 @@ fd
 amd-ucode
 nvidia
 nvidia-utils
+rsync
+reflector
