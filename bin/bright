@@ -2,15 +2,13 @@
 bright=$1
 dir='/sys/class/backlight/amdgpu_bl0/brightness'
 cur_bright=$(cat $dir)
-if [[ $cur_bright != '250' || ! $cur_bright != '0' ]]; then
-	if [ "$bright" == "" ]; then
-		bright=250
-	elif [ ${bright: -1} == '+' ]; then
-		bright=${bright::${#bright}-1}
-		bright=$(($bright + $cur_bright))
-	elif [ ${bright: -1} == '-' ]; then
-		bright=${bright::${#bright}-1}
-		bright=$(($cur_bright - $bright))
-	fi
-echo $bright >> /sys/class/backlight/amdgpu_bl0/brightness
+if [ "$bright" == "" ]; then
+	bright=250
+elif [ ${bright: -1} == '+' ]; then
+	bright=${bright::${#bright}-1}
+	bright=$(($bright + $cur_bright))
+elif [ ${bright: -1} == '-' ]; then
+	bright=${bright::${#bright}-1}
+	bright=$(($cur_bright - $bright))
 fi
+echo $bright >> $dir
