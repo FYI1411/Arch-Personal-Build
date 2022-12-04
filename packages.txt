@@ -40,3 +40,4 @@ nvidia-utils
 rsync
 reflector
 cbatticon
+network-manager-applet

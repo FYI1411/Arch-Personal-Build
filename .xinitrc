@@ -57,4 +57,5 @@ fcitx5 &
 nitrogen --restore &
 pit &
 cbatticon &
+nm-applet &
 exec /usr/bin/qtile start
