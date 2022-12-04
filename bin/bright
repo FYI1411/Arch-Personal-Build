@@ -1,2 +1,12 @@
 #! /bin/bash
-echo "$1" >> /sys/class/backlight/amdgpu_bl0/brightness 
+dir='/sys/class/backlight/amdgpu_bl0/brightness'
+if [ "$1" == "" ]; then
+	bright=250
+elif [ ${1: -1} == "+" ]; then
+	bright=${1::${#1}-1}
+	bright=$(($bright + $(cat $dir)))
+elif [ ${1: -1} == "-" ]; then
+	bright=${1::${#1}-1}
+	bright=$(($(cat $dir) - $bright))
+fi
+echo $bright >> /sys/class/backlight/amdgpu_bl0/brightness 
