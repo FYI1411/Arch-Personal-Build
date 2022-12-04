@@ -95,6 +95,9 @@ keys = [
 	Key([], "F7", lazy.spawn("bright 10-")),
 	Key([], "F8", lazy.spawn("bright 10+")),
 	
+	# session lock
+    Key([], "F8", lazy.spawn("xsecurelock")),		
+
 	# wifi toggle
 	Key([], "F12", lazy.spawn("wifi -t")),
 	
