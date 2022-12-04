@@ -86,20 +86,20 @@ keys = [
         desc="Spawn a command using a prompt widget"),
 	
 	# Sound config
-	Key([], "F1", lazy.spawn("amixer -q set Master toggle")),
-    Key([], "F2", lazy.spawn("amixer set Master 1%- unmute")),
-    Key([], "F3", lazy.spawn("amixer set Master 1%+ unmute")),
+	Key([mod], "F1", lazy.spawn("amixer -q set Master toggle")),
+    Key([mod], "F2", lazy.spawn("amixer set Master 1%- unmute")),
+    Key([mod], "F3", lazy.spawn("amixer set Master 1%+ unmute")),
 	
 	# brightness config
-	Key([], "F6", lazy.spawn("bright")),
-	Key([], "F7", lazy.spawn("bright 10-")),
-	Key([], "F8", lazy.spawn("bright 10+")),
+	Key([mod], "F6", lazy.spawn("bright")),
+	Key([mod], "F7", lazy.spawn("bright 10-")),
+	Key([mod], "F8", lazy.spawn("bright 10+")),
 	
 	# session lock
-    Key([], "F11", lazy.spawn("xsecurelock")),		
+    Key([mod], "F11", lazy.spawn("xsecurelock")),		
 
 	# wifi toggle
-	Key([], "F12", lazy.spawn("wifi -t")),
+	Key([mod], "F12", lazy.spawn("wifi -t")),
 	
 	# live wallpaper shortcuts
 	Key([mod], "q", lazy.spawn("livewp")),
