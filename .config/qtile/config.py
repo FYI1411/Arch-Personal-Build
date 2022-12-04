@@ -90,6 +90,9 @@ keys = [
     Key([mod], "F2", lazy.spawn("amixer set Master 1%- unmute")),
     Key([mod], "F3", lazy.spawn("amixer set Master 1%+ unmute")),
 	
+	# brightness
+	Key([mod], "F6", lazy.spawn("bright 100")),
+
 	# live wallpaper shortcuts
 	Key([mod], "q", lazy.spawn("livewp")),
 	
