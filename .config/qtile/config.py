@@ -87,8 +87,8 @@ keys = [
 	
 	# Sound config shortcuts
 	Key([mod], "F1", lazy.spawn("amixer -q set Master toggle")),
-    Key([mod], "F2", lazy.spawn("amixer set Master 600- unmute")),
-    Key([mod], "F3", lazy.spawn("amixer set Master 600+ unmute")),
+    Key([mod], "F2", lazy.spawn("amixer set Master 1%- unmute")),
+    Key([mod], "F3", lazy.spawn("amixer set Master 1%+ unmute")),
 	
 	# live wallpaper shortcuts
 	Key([mod], "q", lazy.spawn("livewp")),
