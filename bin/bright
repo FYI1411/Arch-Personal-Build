@@ -11,4 +11,4 @@ elif [ ${bright: -1} == '-' ]; then
 	bright=${bright::${#bright}-1}
 	bright=$(($cur_bright - $bright))
 fi
-echo $bright >> $dir
+echo $bright > $dir 2> /dev/null
