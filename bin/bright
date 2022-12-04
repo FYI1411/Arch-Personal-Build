@@ -1,12 +1,16 @@
 #! /bin/bash
+bright=$1
 dir='/sys/class/backlight/amdgpu_bl0/brightness'
-if [ "$1" == "" ]; then
-	bright=250
-elif [ ${1: -1} == "+" ]; then
-	bright=${1::${#1}-1}
-	bright=$(($bright + $(cat $dir)))
-elif [ ${1: -1} == "-" ]; then
-	bright=${1::${#1}-1}
-	bright=$(($(cat $dir) - $bright))
+cur_bright=$(cat $dir)
+if [[ $cur_bright != '250' || ! $cur_bright != '0' ]]; then
+	if [ "$bright" == "" ]; then
+		bright=250
+	elif [ ${bright: -1} == '+' ]; then
+		bright=${bright::${#bright}-1}
+		bright=$(($bright + $cur_bright))
+	elif [ ${bright: -1} == '-' ]; then
+		bright=${bright::${#bright}-1}
+		bright=$(($cur_bright - $bright))
+	fi
+echo $bright >> /sys/class/backlight/amdgpu_bl0/brightness
 fi
-echo $bright >> /sys/class/backlight/amdgpu_bl0/brightness 
