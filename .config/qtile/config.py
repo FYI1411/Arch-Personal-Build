@@ -89,7 +89,8 @@ keys = [
 	Key([mod], "F1", lazy.spawn("amixer -q set Master toggle")),
     Key([mod], "F2", lazy.spawn("amixer set Master 1%- unmute")),
     Key([mod], "F3", lazy.spawn("amixer set Master 1%+ unmute")),
-	
+	Key([mod], "F4", lazy.spawn("amixer set Capture toggle")),
+
 	# brightness config
 	Key([mod], "F6", lazy.spawn("bright")),
 	Key([mod], "F7", lazy.spawn("bright 10-")),
