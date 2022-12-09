@@ -112,7 +112,7 @@ keys = [
 	Key([mod], "x", lazy.spawn("scrot -s")),
 	
 	# emacs
-	Key([mod], "e", lazy.spawn("emacsclient -c -a 'emacs'")),
+	Key([mod], "e", lazy.spawn("emacs")),
 	
 	# torrents
 	Key([mod], "z", lazy.spawn("simplescreenrecorder")),
