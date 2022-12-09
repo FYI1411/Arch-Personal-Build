@@ -17,18 +17,18 @@
 (setq use-package-always-ensure 't)
 
 ;; Theme
-(use-package 'underwater-theme
+(use-package underwater-theme
 	:config (load-theme 'underwater t))
 
 ;; Evil mode
-(use-package 'evil)
+(use-package evil)
 (require 'evil)
 (evil-mode 1)
 
 ;; Key binds
 (setq  x-meta-keysym 'super
        x-super-keysym 'meta)
-(use-package 'key-chord)
+(use-package key-chord)
 (setq key-chord-two-keys-delay 0.5)
 (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
 (key-chord-mode 1)
