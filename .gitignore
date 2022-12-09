@@ -28,7 +28,6 @@ Desktop/
 Downloads/*
 tmp/*
 debug.log
-.xscreensaver
 .emacs.d/
 .doom.d/init.el
 .config/pavucontrol.ini
