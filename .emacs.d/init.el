@@ -2,6 +2,8 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
+(line-number-mode 1)
+(column-number-mode 1)
 
 ;; Define and initialise package repositories
 (require 'package)
@@ -42,3 +44,32 @@
 ;; Load custom into custom.el
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
+
+;; splash screen
+(use-package dashboard
+	:ensure t
+	:config
+	(dashboard-setup-startup-hook))
+
+;; completion
+(use-package company
+	:ensure t
+	:config
+	(setq company-idle-delay 0)
+	(setq company-minimum-prefix-length 5))
+
+(use-package company-irony
+	:ensure t
+	:config
+	(add-to-list 'company-backends 'company-irony))
+
+(use-package irony
+	:ensure t
+	:config
+	(add-hook 'c++-mode-hook 'irony-mode)
+	(add-hook 'c-mode-hook 'irony-mode)
+	(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options))
+
+(with-eval-after-load 'company
+	(add-hook 'c++-mode-hook 'company-mode)
+	(add-hook 'c-mode-hook 'company-mode))

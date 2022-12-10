@@ -42,3 +42,6 @@ reflector
 cbatticon
 network-manager-applet
 xsecurelock
+cmake
+clang
+llvm
