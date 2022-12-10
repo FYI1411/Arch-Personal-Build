@@ -16,9 +16,15 @@
 (require 'use-package)
 (setq use-package-always-ensure 't)
 
-;; Theme
-(use-package underwater-theme
-	:config (load-theme 'underwater t))
+(unless (package-installed-p 'doom-themes)
+ 	(package-refresh-contents)
+ 	(package-install 'doom-themes))
+
+;; Which key mode
+(use-package which-key
+  :ensure t
+  :init
+  (which-key-mode))
 
 ;; Evil mode
 (use-package evil)

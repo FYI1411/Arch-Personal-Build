@@ -29,7 +29,7 @@ Downloads/*
 tmp/*
 debug.log
 .emacs.d/*
-!.emacs.d/init.el
+!.emacs.d/*.el
 .config/pavucontrol.ini
 .config/pulse/
 .config/QtProject.conf
