@@ -33,7 +33,7 @@ from libqtile.lazy import lazy
 from libqtile import hook
 import os
 import subprocess
-mod = "mod1"
+mod = "mod4"
 # terminal = guess_terminal()
 terminal = "kitty "
 browser = "qutebrowser "
@@ -95,9 +95,6 @@ keys = [
 	Key([mod], "F6", lazy.spawn("bright")),
 	Key([mod], "F7", lazy.spawn("bright 10-")),
 	Key([mod], "F8", lazy.spawn("bright 10+")),
-	
-	# session lock
-    Key([mod], "F11", lazy.spawn("xsecurelock")),		
 
 	# wifi toggle
 	Key([mod], "F12", lazy.spawn("wifi -t")),

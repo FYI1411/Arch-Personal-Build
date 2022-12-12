@@ -9,3 +9,4 @@ alias mirror='sudo reflector --latest 10 --protocol https --sort rate --save /et
 alias em='emacsclient -c -a emacs'
 alias gitc='git checkout -- '
 alias gits='git status'
+alias gitd='git diff'
