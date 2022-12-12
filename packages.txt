@@ -31,7 +31,7 @@ pipewire
 pipewire-alsa
 pipewire-pulse
 pavucontrol
-emacs
+emacs-nativecomp
 ripgrep
 fd
 amd-ucode
