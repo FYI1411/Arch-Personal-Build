@@ -121,10 +121,10 @@ apps[0] = terminal + "fzf"
 apps[1] = browser
 apps[2] = "code"
 apps[3] = "firefox"
-apps[4] = "libreoffice"
-apps[5] = "pavucontrol"
+apps[4] = "pavucontrol"
+apps[5] = terminal + "ncdu"
 apps[6] = terminal + "rtorrent"
-apps[7] = terminal + "ncdu"
+apps[7] = terminal + "top"
 apps[8] = terminal + "nvtop"
 apps[9] = terminal + "bpytop"
 
