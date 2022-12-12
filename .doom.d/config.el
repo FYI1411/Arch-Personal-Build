@@ -77,6 +77,8 @@
 
 ;; my config
 ;; key bind
+(setq  x-meta-keysym 'super
+       x-super-keysym 'meta)
 (setq key-chord-two-keys-delay 0.5)
 (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
 (key-chord-mode 1)
