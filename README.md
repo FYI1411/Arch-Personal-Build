@@ -1,2 +1,2 @@
 # Arch
-My personal config file for arch linux
+My personal config files for arch linux
