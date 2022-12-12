@@ -33,7 +33,7 @@ from libqtile.lazy import lazy
 from libqtile import hook
 import os
 import subprocess
-mod = "mod4"
+mod = "mod1"
 # terminal = guess_terminal()
 terminal = "kitty "
 browser = "qutebrowser "
