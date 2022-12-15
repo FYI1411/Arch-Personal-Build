@@ -31,8 +31,6 @@ pipewire-alsa
 pipewire-pulse
 pavucontrol
 emacs-nativecomp
-ripgrep
-fd
 amd-ucode
 nvidia
 nvidia-utils

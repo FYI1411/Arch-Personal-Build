@@ -28,8 +28,8 @@ Desktop/
 Downloads/*
 tmp/*
 debug.log
-.emacs.d/
-.doom.d/init.el
+.emacs.d/*
+!.emacs.d/init.el
 .config/pavucontrol.ini
 .config/pulse/
 .config/QtProject.conf
