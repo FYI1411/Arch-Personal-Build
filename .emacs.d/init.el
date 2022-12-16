@@ -57,6 +57,47 @@
 	(dashboard-setup-startup-hook))
 (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
 
+;; Line numbers
+(use-package 'display-line-numbers)
+(defcustom display-line-numbers-exempt-modes
+  '(vterm-mode eshell-mode shell-mode term-mode ansi-term-mode)
+  "Major modes on which to disable line numbers."
+  :group 'display-line-numbers
+  :type 'list
+  :version "green")
+(defun display-line-numbers--turn-on ()
+  "Turn on line numbers except for certain major modes.
+Exempt major modes are defined in `display-line-numbers-exempt-modes'."
+  (unless (or (minibufferp)
+              (member major-mode display-line-numbers-exempt-modes))
+    (display-line-numbers-mode)))
+(global-display-line-numbers-mode)
+
+;; Completion
+(use-package lsp-mode
+  :commands (lsp lsp-deferred)
+  :init (setq lsp-keymap-prefix "C-c l")  ;; Or 'C-l', 's-l'
+  :hook (python-mode . lsp)
+		(c-mode . lsp)
+		(c++-mode . lsp)
+  :config (lsp-enable-which-key-integration t))
+(use-package company
+  :after lsp-mode
+  :hook (prog-mode . company-mode)
+  :bind (:map company-active-map
+         ("<tab>" . company-complete-selection))
+        (:map lsp-mode-map
+         ("<tab>" . company-indent-or-complete-common))
+  :custom
+  (company-minimum-prefix-length 1)
+  (company-idle-delay 0.0))
+(use-package company-box
+  :hook (company-mode . company-box-mode))
+(use-package lsp-ui
+  :hook (lsp-mode . lsp-ui-mode))
+(use-package evil-nerd-commenter
+  :bind ("M-/" . evilnc-comment-or-uncomment-lines))
+
 ;; Load custom into custom.el
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
