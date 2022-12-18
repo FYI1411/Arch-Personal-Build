@@ -1,0 +1,2 @@
+#! /bin/bash
+xdotool sleep 0.1 key --clearmodifiers $@

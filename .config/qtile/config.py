@@ -113,6 +113,9 @@ keys = [
 	
 	# torrents
 	Key([mod], "z", lazy.spawn("simplescreenrecorder")),
+	
+	# test
+	Key([mod], "y", lazy.spawn("xdotool key bracketleft")),
 ]
 
 # list of apps for shortcuts
