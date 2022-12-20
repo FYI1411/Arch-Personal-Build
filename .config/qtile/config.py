@@ -84,12 +84,12 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(),
         desc="Spawn a command using a prompt widget"),
-	
-	# Sound config
+
+        # Sound config
 	Key([mod], "F1", lazy.spawn("amixer -q set Master toggle")),
     Key([mod], "F2", lazy.spawn("amixer set Master 1%- unmute")),
     Key([mod], "F3", lazy.spawn("amixer set Master 1%+ unmute")),
-	Key([mod], "F4", lazy.spawn("amixer set Capture toggle")),
+        Key([mod], "F4", lazy.spawn("amixer set Capture toggle")),
 
 	# brightness config
 	Key([mod], "F6", lazy.spawn("bright")),
@@ -98,24 +98,33 @@ keys = [
 
 	# wifi toggle
 	Key([mod], "F12", lazy.spawn("wifi -t")),
-	
+
 	# live wallpaper shortcuts
 	Key([mod], "q", lazy.spawn("livewp")),
-	
+
 	# picom toggle shortcut
 	Key([mod], "p", lazy.spawn("pit")),
-	
+
 	# scrot screenshot
 	Key([mod], "x", lazy.spawn("scrot -s")),
-	
+
 	# emacs
 	Key([mod], "e", lazy.spawn("emacsclient -c -a 'emacs'")),
-	
+
 	# torrents
 	Key([mod], "z", lazy.spawn("simplescreenrecorder")),
 	
-	# test
-	Key([mod], "y", lazy.spawn("xdotool key bracketleft")),
+	# key binds
+	Key([mod], "i", lazy.spawn("press bracketleft")),
+	Key([mod, "shift"], "i", lazy.spawn("press shift+bracketleft")),
+	Key([mod], "o", lazy.spawn("press bracketright")),
+	Key([mod, "shift"], "o", lazy.spawn("press bracketright")),
+	Key([mod], "y", lazy.spawn("press minus")),
+	Key([mod, "shift"], "y", lazy.spawn("press shift+minus")),
+	Key([mod], "u", lazy.spawn("press equal")),
+	Key([mod, "shift"], "u", lazy.spawn("press shift+equal")),
+	Key([mod], "m", lazy.spawn("press backslash")),
+	Key([mod, "shift"], "m", lazy.spawn("press shift+backslash")),
 ]
 
 # list of apps for shortcuts

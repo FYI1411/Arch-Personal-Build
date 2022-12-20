@@ -56,7 +56,6 @@ fcitx5 &
 # ~/bin/livewp &
 nitrogen --restore &
 pit &
-xbindkeys &
 cbatticon &
 nm-applet &
 emacs --daemon &

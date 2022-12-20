@@ -1,6 +1,5 @@
 xorg
 xorg-xinit
-xbindkeys
 xdotool
 polkit
 kitty
