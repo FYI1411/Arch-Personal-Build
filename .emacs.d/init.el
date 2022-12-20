@@ -29,6 +29,11 @@
         doom-themes-enable-italic t) 
   (load-theme 'doom-one t))
 
+;; Modeline
+(use-package all-the-icons)
+(use-package doom-modeline
+  :init (doom-modeline-mode 1))
+
 ;; Which key mode
 (use-package which-key
   :ensure t
@@ -40,6 +45,8 @@
 (require 'evil)
 (evil-mode 1)
 (evil-set-undo-system 'undo-redo)
+(use-package evil-nerd-commenter
+	:bind ("M-/" . evilnc-comment-or-uncomment-lines))
 
 ;; Key binds
 (setq  x-meta-keysym 'super
@@ -49,7 +56,7 @@
 (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
 (key-chord-mode 1)
 
-;; splash screen
+;; Splash screen
 (use-package dashboard
 	:ensure t
 	:config
@@ -59,20 +66,8 @@
 (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
 
 ;; Line numbers
-(use-package display-line-numbers)
-(defcustom display-line-numbers-exempt-modes
-  '(vterm-mode eshell-mode shell-mode term-mode ansi-term-mode)
-  "Major modes on which to disable line numbers."
-  :group 'display-line-numbers
-  :type 'list
-  :version "green")
-(defun display-line-numbers--turn-on ()
-  "Turn on line numbers except for certain major modes.
-Exempt major modes are defined in `display-line-numbers-exempt-modes'."
-  (unless (or (minibufferp)
-              (member major-mode display-line-numbers-exempt-modes))
-    (display-line-numbers-mode)))
-(global-display-line-numbers-mode)
+(column-number-mode)
+(global-display-line-numbers-mode t)
 
 ;; Completion
 (use-package lsp-mode
@@ -96,10 +91,8 @@ Exempt major modes are defined in `display-line-numbers-exempt-modes'."
   :hook (company-mode . company-box-mode))
 (use-package lsp-ui
   :hook (lsp-mode . lsp-ui-mode))
-(use-package evil-nerd-commenter
-  :bind ("M-/" . evilnc-comment-or-uncomment-lines))
 
-;; Backup settings
+;; Backup
 (setq backup-directory-alist `(("." . "~/tmp")))
 (setq version-control t
 	delete-old-versions t
