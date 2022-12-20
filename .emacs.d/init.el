@@ -40,6 +40,15 @@
 (require 'evil)
 (evil-mode 1)
 
+;; Undo
+(use-package undo-tree
+  :ensure t
+  :after evil
+  :diminish
+  :config
+  (evil-set-undo-system 'undo-tree)
+  (global-undo-tree-mode 1))
+
 ;; Key binds
 (setq  x-meta-keysym 'super
        x-super-keysym 'meta)
@@ -58,7 +67,7 @@
 (setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
 
 ;; Line numbers
-(use-package 'display-line-numbers)
+(use-package display-line-numbers)
 (defcustom display-line-numbers-exempt-modes
   '(vterm-mode eshell-mode shell-mode term-mode ansi-term-mode)
   "Major modes on which to disable line numbers."
@@ -97,6 +106,12 @@ Exempt major modes are defined in `display-line-numbers-exempt-modes'."
   :hook (lsp-mode . lsp-ui-mode))
 (use-package evil-nerd-commenter
   :bind ("M-/" . evilnc-comment-or-uncomment-lines))
+
+;; Backup settings
+(setq backup-directory-alist `(("." . "~/tmp")))
+(setq version-control t
+      delete-old-versions t
+      backup-by-copying t)
 
 ;; Load custom into custom.el
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
