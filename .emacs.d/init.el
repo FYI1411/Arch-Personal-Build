@@ -39,15 +39,7 @@
 (use-package evil)
 (require 'evil)
 (evil-mode 1)
-
-;; Undo
-(use-package undo-tree
-  :ensure t
-  :after evil
-  :diminish
-  :config
-  (evil-set-undo-system 'undo-tree)
-  (global-undo-tree-mode 1))
+(evil-set-undo-system 'undo-redo)
 
 ;; Key binds
 (setq  x-meta-keysym 'super
