@@ -102,8 +102,12 @@ Exempt major modes are defined in `display-line-numbers-exempt-modes'."
 ;; Backup settings
 (setq backup-directory-alist `(("." . "~/tmp")))
 (setq version-control t
-      delete-old-versions t
-      backup-by-copying t)
+	delete-old-versions t
+	backup-by-copying t)
+
+;; Magit
+(use-package magit 
+	:ensure t)
 
 ;; Load custom into custom.el
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
