@@ -55,10 +55,6 @@
 (setq key-chord-two-keys-delay 0.5)
 (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
 (key-chord-mode 1)
-(define-key evil-motion-state-map (kbd "  h") 'evil-window-left)
-(define-key evil-motion-state-map (kbd "  j") 'evil-window-down)
-(define-key evil-motion-state-map (kbd "  k") 'evil-window-up)
-(define-key evil-motion-state-map (kbd "  l") 'evil-window-right)
 
 ;; Splash screen
 (use-package dashboard
