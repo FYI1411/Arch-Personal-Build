@@ -23,22 +23,22 @@
 
 ;; Themes
 (use-package doom-themes
-  :ensure t
-  :config
-  (setq doom-themes-enable-bold t
-        doom-themes-enable-italic t) 
-  (load-theme 'doom-one t))
+  	:ensure t
+  	:config
+  	(setq doom-themes-enable-bold t
+		doom-themes-enable-italic t)
+	(load-theme 'doom-one t))
 
 ;; Modeline
 (use-package all-the-icons)
 (use-package doom-modeline
-  :init (doom-modeline-mode 1))
+	:init (doom-modeline-mode 1))
 
 ;; Which key mode
 (use-package which-key
-  :ensure t
-  :init
-  (which-key-mode))
+	:ensure t
+	:init
+	(which-key-mode))
 
 ;; Evil mode
 (use-package evil)
@@ -55,6 +55,10 @@
 (setq key-chord-two-keys-delay 0.5)
 (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
 (key-chord-mode 1)
+(define-key evil-motion-state-map (kbd "  h") 'evil-window-left)
+(define-key evil-motion-state-map (kbd "  j") 'evil-window-down)
+(define-key evil-motion-state-map (kbd "  k") 'evil-window-up)
+(define-key evil-motion-state-map (kbd "  l") 'evil-window-right)
 
 ;; Splash screen
 (use-package dashboard
@@ -71,26 +75,28 @@
 
 ;; Completion
 (use-package lsp-mode
-  :commands (lsp lsp-deferred)
-  :init (setq lsp-keymap-prefix "C-c l")  ;; Or 'C-l', 's-l'
-  :hook (python-mode . lsp)
+  	:commands (lsp lsp-deferred)
+  	:init (setq lsp-keymap-prefix "C-c l")  ;; Or 'C-l', 's-l'
+  	:hook (python-mode . lsp)
 		(c-mode . lsp)
 		(c++-mode . lsp)
   :config (lsp-enable-which-key-integration t))
 (use-package company
-  :after lsp-mode
-  :hook (prog-mode . company-mode)
-  :bind (:map company-active-map
-         ("<tab>" . company-complete-selection))
-        (:map lsp-mode-map
-         ("<tab>" . company-indent-or-complete-common))
-  :custom
-  (company-minimum-prefix-length 1)
-  (company-idle-delay 0.0))
+  	:after lsp-mode
+  	:hook (prog-mode . company-mode)
+  	:bind (:map company-active-map
+        ("<tab>" . company-complete-selection))
+       	(:map lsp-mode-map
+        ("<tab>" . company-indent-or-complete-common))
+  	:custom
+  	(company-minimum-prefix-length 1)
+  	(company-idle-delay 0.0))
 (use-package company-box
-  :hook (company-mode . company-box-mode))
+  	:hook (company-mode . company-box-mode))
 (use-package lsp-ui
-  :hook (lsp-mode . lsp-ui-mode))
+  	:hook (lsp-mode . lsp-ui-mode))
+(use-package lsp-treemacs
+	:after lsp)
 
 ;; Backup
 (setq backup-directory-alist `(("." . "~/tmp")))
