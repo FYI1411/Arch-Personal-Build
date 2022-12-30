@@ -9,9 +9,9 @@ elif [[ $# > 0 ]]; then
 		else
 			rfkill unblock all
 		fi
+	elif [[ $1 == "-d" ]]; then
+		nmcli d wifi connect $2
 	else
 		nmcli --ask device wifi connect "$1"
 	fi
 fi
-
-echo "My SSID: $(nmcli | grep connected | cut -d " " -f 4)"
