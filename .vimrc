@@ -2,6 +2,6 @@ set number
 inoremap jj <ESC>
 set tabstop=4
 syntax on
-:colorscheme slate
+colorscheme slate
 hi Normal guibg=NONE ctermbg=NONE
-:highlight LineNr ctermfg=blue
+hi LineNr ctermfg=blue
