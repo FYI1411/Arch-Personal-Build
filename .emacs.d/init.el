@@ -109,7 +109,7 @@
 	backup-by-copying t)
 
 ;; Auto-save
-(setq auto-save-file-name-transforms `(("." "~/tmp" t)))
+(setq auto-save-file-name-transforms `((".*" "~/tmp" t)))
 
 ;; Magit
 (use-package magit 
