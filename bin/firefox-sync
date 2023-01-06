@@ -1,0 +1,27 @@
+#!/bin/sh
+
+profile=$(find ~/.mozilla/firefox/ -type d -name "*.default" | awk -F / '{print $NF}')
+static=static-$profile
+link=$profile
+volatile=/dev/shm/firefox-$profile-$USER
+
+IFS=
+set -efu
+
+cd ~/.mozilla/firefox
+
+if [ ! -r $volatile ]; then
+	mkdir -m0700 $volatile
+fi
+
+if [ "$(readlink $link)" != "$volatile" ]; then
+	mv $link $static
+	ln -s $volatile $link
+fi
+
+if [ -e $link/.unpacked ]; then
+	rsync -av --delete --exclude .unpacked ./$link/ ./$static/
+else
+	rsync -av ./$static/ ./$link/
+	touch $link/.unpacked
+fi

@@ -40,3 +40,4 @@ reflector
 cbatticon
 network-manager-applet
 clang
+cronie
