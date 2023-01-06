@@ -138,7 +138,7 @@ apps[5] = terminal + "ncdu"
 apps[6] = terminal + "rtorrent"
 apps[7] = terminal + "top"
 apps[8] = terminal + "nvtop"
-apps[9] = terminal + "bpytop"
+apps[9] = terminal + "btop"
 
 for i, app in enumerate(apps):
 	keys.extend([
