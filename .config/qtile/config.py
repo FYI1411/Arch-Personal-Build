@@ -111,7 +111,7 @@ keys = [
 	# emacs
 	Key([mod], "e", lazy.spawn("emacsclient -c -a 'emacs'")),
 
-	# torrents
+	# screen recorder
 	Key([mod], "z", lazy.spawn("simplescreenrecorder")),
 	
 	# key binds
