@@ -35,12 +35,10 @@ debug.log
 .config/QtProject.conf
 .config/dconf/
 .config/ibus/
-.config/htop/
-.config/libreoffice/
 .config/nitrogen/
 .config/qtile/__pycache__/
 .config/qutebrowser/
 .config/cef_user_data/
 .config/fcitx*
 .config/systemd/
-.config/bpytop/
+.config/btop/
