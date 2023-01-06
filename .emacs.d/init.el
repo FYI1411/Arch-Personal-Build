@@ -103,13 +103,15 @@
 	:after lsp)
 
 ;; Backup
-(setq backup-directory-alist `(("." . "~/tmp")))
+(setq backup-directory-alist
+	`((".*" . ,"~/tmp/")))
 (setq version-control t
 	delete-old-versions t
 	backup-by-copying t)
 
 ;; Auto-save
-(setq auto-save-visited-mode t)
+(setq auto-save-file-name-transforms
+	`((".*" ,"~/tmp/" t)))
 
 ;; Magit
 (use-package magit 
