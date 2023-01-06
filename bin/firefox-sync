@@ -1,6 +1,6 @@
 #!/bin/sh
 
-profile=$(find ~/.mozilla/firefox/ -type d -name "*.default" | awk -F / '{print $NF}')
+profile=$(find ~/.mozilla/firefox/ -type d -name "*.default" | awk -F / '{print $NF}' | cut -d '-' -f 2)
 static=static-$profile
 link=$profile
 volatile=/dev/shm/firefox-$profile-$USER
