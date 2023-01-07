@@ -85,7 +85,7 @@ keys = [
     Key([mod], "r", lazy.spawncmd(),
         desc="Spawn a command using a prompt widget"),
 
-        # Sound config
+    # Sound config
 	Key([mod], "F1", lazy.spawn("amixer -q set Master toggle")),
     Key([mod], "F2", lazy.spawn("amixer set Master 1%- unmute")),
     Key([mod], "F3", lazy.spawn("amixer set Master 1%+ unmute")),
@@ -125,6 +125,9 @@ keys = [
 	Key([mod, "shift"], "u", lazy.spawn("press shift+equal")),
 	Key([mod], "m", lazy.spawn("press backslash")),
 	Key([mod, "shift"], "m", lazy.spawn("press shift+backslash")),
+	
+	# hide bar
+	Key([mod], "c", lazy.hide_show_bar("top")),
 ]
 
 # list of apps for shortcuts
