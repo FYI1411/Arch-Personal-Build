@@ -1,9 +1,14 @@
 #! /bin/bash
 bright=$1
+max_bright=250
 dir='/sys/class/backlight/amdgpu_bl0/brightness'
 cur_bright=$(cat $dir)
 if [ "$bright" == "" ]; then
-	bright=250
+	if [ "$cur_bright" == "$max_bright" ]; then
+		bright=0
+	else
+		bright="$max_bright"
+	fi
 elif [ ${bright: -1} == '+' ]; then
 	bright=${bright::${#bright}-1}
 	bright=$(($bright + $cur_bright))
