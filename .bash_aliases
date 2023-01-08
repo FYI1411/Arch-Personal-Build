@@ -2,7 +2,6 @@
 alias mf='cd ~/Desktop'
 alias ssr='simplescreenrecorder'
 alias open='xdg-open'
-alias jn='jupyter notebook'
 alias install='sudo pacman -S $(cat ~/packages.txt)'
 alias enable='systemctl enable --now $(cat ~/service.txt)'
 alias update='paru && clean'
