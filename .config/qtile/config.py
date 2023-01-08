@@ -39,7 +39,19 @@ terminal = "kitty "
 browser = "qutebrowser "
 
 keys = [
-    # Switch between windows
+	# Key binds
+	Key([mod], "i", lazy.spawn("press bracketleft")),
+	Key([mod, "shift"], "i", lazy.spawn("press shift+bracketleft")),
+	Key([mod], "o", lazy.spawn("press bracketright")),
+	Key([mod, "shift"], "o", lazy.spawn("press bracketright")),
+	Key([mod], "y", lazy.spawn("press minus")),
+	Key([mod, "shift"], "y", lazy.spawn("press shift+minus")),
+	Key([mod], "u", lazy.spawn("press equal")),
+	Key([mod, "shift"], "u", lazy.spawn("press shift+equal")),
+	Key([mod], "m", lazy.spawn("press backslash")),
+	Key([mod, "shift"], "m", lazy.spawn("press shift+backslash")),
+
+	# Switch between windows
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
@@ -91,42 +103,30 @@ keys = [
     Key([mod], "F3", lazy.spawn("amixer set Master 1%+ unmute")),
    	Key([mod], "F4", lazy.spawn("amixer set Capture toggle")),
 
-	# brightness config
+	# Brightness config
 	Key([mod], "F6", lazy.spawn("bright")),
 	Key([mod], "F7", lazy.spawn("bright 10-")),
 	Key([mod], "F8", lazy.spawn("bright 10+")),
 
-	# wifi toggle
+	# Wifi toggle
 	Key([mod], "F12", lazy.spawn("wifi -t")),
 
-	# live wallpaper shortcuts
+	# Live wallpaper shortcuts
 	Key([mod], "q", lazy.spawn("livewp")),
 
-	# picom toggle shortcut
+	# Picom toggle shortcut
 	Key([mod], "p", lazy.spawn("pit")),
 
-	# scrot screenshot
+	# Scrot screenshot
 	Key([mod], "x", lazy.spawn("scrot -s")),
 
-	# emacs
+	# Emacs
 	Key([mod], "e", lazy.spawn("emacsclient -c -a 'emacs'")),
 
-	# screen recorder
+	# Screen recorder
 	Key([mod], "z", lazy.spawn("simplescreenrecorder")),
 	
-	# key binds
-	Key([mod], "i", lazy.spawn("press bracketleft")),
-	Key([mod, "shift"], "i", lazy.spawn("press shift+bracketleft")),
-	Key([mod], "o", lazy.spawn("press bracketright")),
-	Key([mod, "shift"], "o", lazy.spawn("press bracketright")),
-	Key([mod], "y", lazy.spawn("press minus")),
-	Key([mod, "shift"], "y", lazy.spawn("press shift+minus")),
-	Key([mod], "u", lazy.spawn("press equal")),
-	Key([mod, "shift"], "u", lazy.spawn("press shift+equal")),
-	Key([mod], "m", lazy.spawn("press backslash")),
-	Key([mod, "shift"], "m", lazy.spawn("press shift+backslash")),
-	
-	# hide bar
+	# Hide bar
 	Key([mod], "c", lazy.hide_show_bar("top")),
 ]
 
