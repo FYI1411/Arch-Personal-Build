@@ -54,7 +54,7 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 fcitx5 &
 ~/bin/livewp ~/wallpaper/live_wp2.mp4 &
-nitrogen --restore &
+nitrogen ~/wallpaper/wp.jpg &
 pit &
 cbatticon &
 nm-applet &
