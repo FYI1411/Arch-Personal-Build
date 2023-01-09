@@ -2,6 +2,7 @@
 alias mf='cd ~/Desktop'
 alias ssr='simplescreenrecorder'
 alias open='xdg-open'
+alias system='sudo pacman -S $(cat ~/system.txt)'
 alias install='sudo pacman -S $(cat ~/packages.txt)'
 alias enable='systemctl enable --now $(cat ~/service.txt)'
 alias update='paru && clean'

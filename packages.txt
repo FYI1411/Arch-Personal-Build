@@ -32,9 +32,6 @@ pipewire-alsa
 pipewire-pulse
 pavucontrol
 emacs-nativecomp
-amd-ucode
-nvidia
-nvidia-utils
 rsync
 reflector
 cbatticon
