@@ -1,5 +1,6 @@
 mesa
 xf86-video-vesa
+xf86-video-ati
 amd-ucode
 nvidia
 nvidia-utils
