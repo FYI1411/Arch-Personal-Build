@@ -1,7 +1,7 @@
 #source file for bash's aliases
 alias mf='cd ~/Desktop'
 alias open='xdg-open'
-alias driver='sudo pacman -S $(cat ~/system.txt)'
+alias driver='sudo pacman -S $(cat ~/drivers.txt)'
 alias package='sudo pacman -S $(cat ~/packages.txt)'
 alias service='systemctl enable --now $(cat ~/service.txt)'
 alias install='driver && package && service'
