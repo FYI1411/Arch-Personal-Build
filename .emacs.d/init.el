@@ -112,6 +112,7 @@
 ;; Auto-save
 (setq auto-save-file-name-transforms
 	`((".*" ,"~/tmp/" t)))
+(setq auto-save-visited-mode t)
 
 ;; Magit
 (use-package magit 
