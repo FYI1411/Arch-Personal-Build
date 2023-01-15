@@ -1,6 +1,6 @@
 #! /bin/bash
 bright=$1
-max_bright=250
+max_bright=$(cat /sys/class/backlight/amdgpu_bl0/max_brightness)
 dir='/sys/class/backlight/amdgpu_bl0/brightness'
 cur_bright=$(cat $dir)
 if [ "$bright" == "" ]; then
