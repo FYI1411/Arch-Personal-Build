@@ -12,7 +12,7 @@ noto-fonts-emoji
 vim
 qutebrowser
 simplescreenrecorder
-scrot
+flameshot
 picom
 nitrogen
 fcitx5-im
