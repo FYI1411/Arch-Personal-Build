@@ -118,10 +118,10 @@ keys = [
 	Key([mod], "p", lazy.spawn("pit")),
 
 	# Scrot screenshot
-	Key([mod], "x", lazy.spawn("scrot -s")),
+	Key([mod], "x", lazy.spawn("flameshot gui --clipboard")),
 
 	# Emacs
-	Key([mod], "e", lazy.spawn("emacsclient -c -a 'emacs'")),
+	Key([mod], "e", lazy.spawn("emacsclient -c -a emacs")),
 
 	# Screen recorder
 	Key([mod], "z", lazy.spawn("simplescreenrecorder")),
