@@ -1,0 +1,9 @@
+#! /bin/bash
+
+mode='-s'
+if [ "$1" == "-u" ]
+	then
+    mode='-u'
+fi
+
+scrot $mode -e 'xclip -selection clipboard -t image/png -i $f && rm $f'

@@ -1,3 +1,5 @@
+#! /bin/bash
+
 if [ "$1" == "-a" ]
 	then
     set -- "auto commit from gitp command"
