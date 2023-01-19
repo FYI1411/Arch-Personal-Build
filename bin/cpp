@@ -1,10 +1,10 @@
 #! /bin/bash
 main() {
 	for file in "$@"; do
-	    gcc $file -lm -lstdc++ -o main.o || echo "failed to run $file"
+	    gcc $file || echo "failed to compile $file" && exit 1
 		echo "running $file with cpp command"
-		./main.o
-		rm main.o
+		./a.out
+		rm a.out
 	done
 }
 
