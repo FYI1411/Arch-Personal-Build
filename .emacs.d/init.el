@@ -18,7 +18,7 @@
 (require 'use-package)
 (setq use-package-always-ensure 't)
 
-;; update
+;; Update
 (use-package auto-package-update
    :ensure t
    :config
