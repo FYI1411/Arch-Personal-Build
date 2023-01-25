@@ -2,3 +2,4 @@
 
 paru -Rns $(pacman -Qtdq)
 paru -Scc --noconfirm
+pacman -Scc --noconfirm
