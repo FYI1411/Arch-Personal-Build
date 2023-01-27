@@ -1,7 +1,7 @@
 #! /bin/bash
 main() {
 	for file in "$@"; do
-	    gcc $file || echo "failed to compile $file" && exit 1
+	    gcc $file || { echo "failed to compile $file"; exit 1; }
 		echo "running $file with cpp command"
 		./a.out
 		rm a.out
