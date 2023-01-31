@@ -1,5 +1,5 @@
 #! /bin/bash
 
-paru -Rns $(pacman -Qtdq)
-paru -Scc --noconfirm
+aur -Rns $(pacman -Qtdq)
+aur -Scc --noconfirm
 sudo pacman -Scc --noconfirm
