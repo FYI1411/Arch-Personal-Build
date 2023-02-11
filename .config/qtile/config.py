@@ -43,7 +43,7 @@ keys = [
 	Key([mod], "i", lazy.spawn("press bracketleft")),
 	Key([mod, "shift"], "i", lazy.spawn("press shift+bracketleft")),
 	Key([mod], "o", lazy.spawn("press bracketright")),
-	Key([mod, "shift"], "o", lazy.spawn("press bracketright")),
+	Key([mod, "shift"], "o", lazy.spawn("press shift+bracketright")),
 	Key([mod], "y", lazy.spawn("press minus")),
 	Key([mod, "shift"], "y", lazy.spawn("press shift+minus")),
 	Key([mod], "u", lazy.spawn("press equal")),
