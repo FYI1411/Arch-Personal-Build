@@ -38,3 +38,4 @@ cbatticon
 network-manager-applet
 clang
 cronie
+libreoffice
