@@ -53,7 +53,6 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 fcitx5 &
-~/bin/livewp ~/wallpaper/live_wp2.mp4 &
 nitrogen --restore &
 pit &
 cbatticon &
