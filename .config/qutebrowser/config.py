@@ -217,3 +217,7 @@ config.bind('xp', 'set content.proxy socks://localhost:9050/;; message-info "Tor
 config.bind('xm', 'spawn mpv {url}')
 config.bind('xt', 'config-cycle tabs.show always never')
 config.bind('xx', 'config-cycle statusbar.show always never;; config-cycle tabs.show always never')
+
+# My config
+c.url.start_pages = 'https://www.google.com/'
+c.url.searchengines = {'DEFAULT': 'https://www.google.com/search?q={}'}
