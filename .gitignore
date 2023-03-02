@@ -37,7 +37,8 @@ debug.log
 .config/ibus/
 .config/nitrogen/
 .config/qtile/__pycache__/
-.config/qutebrowser/
+.config/qutebrowser/*
+!.config/qutebrowser/config.py
 .config/cef_user_data/
 .config/fcitx*
 .config/systemd/
