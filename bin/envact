@@ -3,12 +3,9 @@
 # and not executed. For instance with:
 # 
 # . path/to/that/script
-env_dir="folder/Python/env"
 
-main() {
-	cd
-	source "./Desktop/$env_dir/$1/bin/activate"
-	cd - 1>/dev/null
-}
-
-main "$1"
+if [ "$1" == '-m' ]; then
+	python -m venv "$2"
+else
+	. "$1/bin/activate"
+fi
