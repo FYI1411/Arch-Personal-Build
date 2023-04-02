@@ -39,3 +39,4 @@ clang
 cronie
 libreoffice
 gdb
+python
