@@ -44,3 +44,4 @@ debug.log
 .config/systemd/
 .config/btop/
 .config/libreoffice/
+.config/obs-studio/

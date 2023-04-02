@@ -124,7 +124,7 @@ keys = [
 	Key([mod], "e", lazy.spawn("emacsclient -c -a emacs")),
 
 	# Screen recorder
-	Key([mod], "z", lazy.spawn("simplescreenrecorder")),
+	Key([mod], "z", lazy.spawn("obs")),
 	
 	# Hide bar
 	Key([mod], "c", lazy.hide_show_bar("top")),
