@@ -11,8 +11,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 vim
 qutebrowser
-simplescreenrecorder
-flameshot
+obs-studio
 picom
 nitrogen
 fcitx5-im
