@@ -122,6 +122,3 @@
 ;; Load custom into custom.el
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
-
-;; Startup commands
-(save-selected-window (treemacs-select-window))
