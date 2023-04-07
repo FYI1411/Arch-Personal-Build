@@ -1,5 +1,5 @@
 ;; Menu
-(tool-bar-mode 1)
+(tool-bar-mode -1)
 (menu-bar-mode 1)
 (scroll-bar-mode -1)
 (line-number-mode 1)
@@ -122,3 +122,6 @@
 ;; Load custom into custom.el
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file)
+
+;; Startup commands
+(save-selected-window (treemacs-select-window))
