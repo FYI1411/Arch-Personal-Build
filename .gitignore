@@ -45,3 +45,6 @@ debug.log
 .config/btop/
 .config/libreoffice/
 .config/obs-studio/
+.config/Code/
+.aws
+.vscode
