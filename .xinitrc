@@ -57,5 +57,4 @@ nitrogen --restore &
 pit &
 cbatticon &
 nm-applet &
-emacs --daemon &
 exec /usr/bin/qtile start

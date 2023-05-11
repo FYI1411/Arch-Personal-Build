@@ -121,7 +121,7 @@ keys = [
 	Key([mod], "x", lazy.spawn("shot")),
 
 	# Emacs
-	Key([mod], "e", lazy.spawn("emacsclient -c -a emacs")),
+	Key([mod], "e", lazy.spawn("emacs")),
 
 	# Screen recorder
 	Key([mod], "z", lazy.spawn("obs")),

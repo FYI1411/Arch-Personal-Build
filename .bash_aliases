@@ -11,7 +11,6 @@ alias clean='aur -Rns $(pacman -Qtdq); aur -Scc --noconfirm; sudo pacman -Scc --
 alias update='aur && clean'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias mirror='sudo reflector --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
-alias em='emacsclient -c -a emacs'
 alias gc='git checkout -- '
 alias gs='git status'
 alias gd='git diff'
