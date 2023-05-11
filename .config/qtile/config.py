@@ -125,6 +125,9 @@ keys = [
 
 	# Screen recorder
 	Key([mod], "z", lazy.spawn("obs")),
+
+	# vscode
+	Key([mod], "v", lazy.spawn("code")),
 	
 	# Hide bar
 	Key([mod], "c", lazy.hide_show_bar("top")),
