@@ -46,6 +46,8 @@ debug.log
 .config/libreoffice/
 .config/obs-studio/
 .config/Code/
+.config/VirtualBox/
 .aws
 .vscode
 .redhat
+VirtualBox VMs
