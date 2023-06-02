@@ -120,9 +120,6 @@ keys = [
 	# Scrot screenshot
 	Key([mod], "x", lazy.spawn("shot")),
 
-	# Emacs
-	Key([mod], "e", lazy.spawn("emacs")),
-
 	# Screen recorder
 	Key([mod], "z", lazy.spawn("obs")),
 
