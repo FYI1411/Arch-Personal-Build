@@ -30,7 +30,6 @@ pipewire
 pipewire-alsa
 pipewire-pulse
 pavucontrol
-emacs-nativecomp
 rsync
 reflector
 cbatticon
