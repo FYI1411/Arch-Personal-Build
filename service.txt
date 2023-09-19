@@ -1,2 +1,4 @@
 NetworkManager
 cronie
+bluez
+bluez-utils
