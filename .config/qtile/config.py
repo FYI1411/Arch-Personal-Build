@@ -139,9 +139,9 @@ apps[3] = "firefox"
 apps[4] = "libreoffice"
 apps[5] = terminal + "alsamixer"
 apps[6] = terminal + "ncdu"
-apps[7] = terminal + "rtorrent"
+apps[7] = terminal + "code"
 apps[8] = terminal + "nvtop"
-apps[9] = terminal + "btop"
+apps[9] = terminal + "rtorrent"
 
 for i, app in enumerate(apps):
 	keys.extend([

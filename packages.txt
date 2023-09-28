@@ -24,7 +24,6 @@ tldr
 firefox
 ncdu
 networkmanager
-btop
 rtorrent
 pipewire
 pipewire-alsa
