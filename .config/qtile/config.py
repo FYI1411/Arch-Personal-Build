@@ -39,18 +39,6 @@ terminal = "kitty "
 browser = "qutebrowser "
 
 keys = [
-	# Key binds
-	Key([mod], "i", lazy.spawn("press bracketleft")),
-	Key([mod, "shift"], "i", lazy.spawn("press shift+bracketleft")),
-	Key([mod], "o", lazy.spawn("press bracketright")),
-	Key([mod, "shift"], "o", lazy.spawn("press shift+bracketright")),
-	Key([mod], "y", lazy.spawn("press minus")),
-	Key([mod, "shift"], "y", lazy.spawn("press shift+minus")),
-	Key([mod], "u", lazy.spawn("press equal")),
-	Key([mod, "shift"], "u", lazy.spawn("press shift+equal")),
-	Key([mod], "m", lazy.spawn("press backslash")),
-	Key([mod, "shift"], "m", lazy.spawn("press shift+backslash")),
-
 	# Switch between windows
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
