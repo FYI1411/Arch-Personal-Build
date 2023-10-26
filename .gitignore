@@ -47,7 +47,9 @@ debug.log
 .config/obs-studio/
 .config/Code/
 .config/VirtualBox/
+.config/user-dirs.*
 .aws
 .vscode
 .redhat
 VirtualBox VMs
+.pulse-cookie
