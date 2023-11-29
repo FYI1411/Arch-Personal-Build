@@ -38,3 +38,4 @@ cronie
 libreoffice
 gdb
 python
+ntfs-3g
