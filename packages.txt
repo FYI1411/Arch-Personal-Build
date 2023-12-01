@@ -1,4 +1,5 @@
 wayland
+xorg-xwayland
 hyprland
 waybar
 otf-font-awesome
