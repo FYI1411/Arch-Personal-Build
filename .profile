@@ -33,5 +33,6 @@ PATH="$HOME/.emacs.d/bin:$PATH"
 export XDG_CONFIG_HOME="${HOME}/.config"
 
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-	exec startx
+	# exec startx
+	exec Hyprland
 fi
