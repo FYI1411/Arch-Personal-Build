@@ -3,6 +3,7 @@ xorg-xwayland
 hyprland
 waybar
 otf-font-awesome
+wofi
 kitty
 mpv
 alsa-utils
