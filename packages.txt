@@ -1,11 +1,14 @@
+kitty
 wayland
 xorg-xwayland
 hyprland
 waybar
 otf-font-awesome
 wofi
-kitty
 mpv
+mpvpaper
+qt5-wayland
+qt6-wayland
 alsa-utils
 noto-fonts
 noto-fonts-cjk
@@ -36,4 +39,5 @@ libreoffice
 gdb
 python
 ntfs-3g
+nvtop
 visual-studio-code-bin
