@@ -4,15 +4,10 @@ xorg-xwayland
 hyprland
 waybar
 otf-font-awesome
-wofi
+fuzzel
 mpv
 mpvpaper
-qt5-wayland
-qt6-wayland
 alsa-utils
-noto-fonts
-noto-fonts-cjk
-noto-fonts-emoji
 vim
 qutebrowser
 obs-studio
