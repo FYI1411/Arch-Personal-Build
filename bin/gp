@@ -2,7 +2,7 @@
 
 if [ "$1" == "-a" ]
 	then
-    set -- "auto commit from gitp command"
+    set -- "auto commit from gp command"
 fi
 
 git status
