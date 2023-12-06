@@ -9,7 +9,6 @@ mpv
 mpvpaper
 alsa-utils
 vim
-qutebrowser
 obs-studio
 fcitx5-im
 fcitx5-unikey
