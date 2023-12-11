@@ -36,4 +36,3 @@ ntfs-3g
 nvtop
 bluez
 bluez-utils
-visual-studio-code-bin
