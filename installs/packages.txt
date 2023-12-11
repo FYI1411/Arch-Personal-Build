@@ -6,7 +6,6 @@ waybar
 otf-font-awesome
 fuzzel
 mpv
-mpvpaper
 alsa-utils
 vim
 obs-studio
