@@ -1,4 +1,3 @@
 NetworkManager
 cronie
-bluez
-bluez-utils
+bluetooth
