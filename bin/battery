@@ -1,9 +1,0 @@
-#! /bin/bash
-
-dir='/sys/class/power_supply/BAT1/'
-status=$(cat $dir/status)
-cap=$(cat $dir/capacity)
-min_cap=20
-if [ $cap -le $min_cap ] && [ $status != 'Charging' ]; then
-	bright 0
-fi
