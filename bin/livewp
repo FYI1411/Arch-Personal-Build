@@ -3,28 +3,26 @@ wp_dir=~/wallpaper/
 num=1
 # when num > the files count => shuf return the max num
 # else only return 1 file
+cmd='mpvpaper -o'
+opt='--gapless-audio=no --loop-playlist --no-audio'
 last_wp=$(ps ax ww | grep -v grep | \
-grep 'mpv --wid=0' | awk -F '/' '{print $NF}')
+grep mpvpaper | awk -F '/' '{print $NF}')
 # space in case file doesn't exist
 if [[ ! -f "$wp_dir$last_wp" ]]; then
 	last_wp=" "
 fi
 
 main() {
-	#replace last wp
-	pkill -9 -f 'mpv --wid=0' > /dev/null 2>&1
-	killall -9 picom > /dev/null 2>&1
+	pkill -9 -f $cmd  > /dev/null 2>&1
 	if [[ ($# -eq 1  &&  $1 =~ ^[0-9]+$) || $# -eq 0 ]]; then
 		if [[ $1 =~ ^[0-9]+$ ]]; then
 			num=$1
 		fi
-		mpv --wid=0 --gapless-audio=no --loop-playlist --no-audio \
-		$(find ${wp_dir} -type f \
+		$cmd "$opt" '*' $(find ${wp_dir} -type f \
 		-wholename "*.mp4" ! -wholename "*$last_wp" | shuf -n ${num}) \
 		> /dev/null 2>&1
 	else
-		mpv --wid=0 --gapless-audio=no --loop-playlist --no-audio $@ \
-		> /dev/null 2>&1
+		$cmd "$opt" '*' $@ > /dev/null 2>&1
 	fi
 }
 

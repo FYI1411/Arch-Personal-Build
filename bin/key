@@ -1,3 +1,0 @@
-#!/bin/bash
-
-grep -e 'apps' -e 'Key(' .config/qtile/config.py | grep -v '#' | awk '{$1=$1};1'
