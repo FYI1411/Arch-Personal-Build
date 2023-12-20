@@ -3,6 +3,9 @@ wayland
 xorg-xwayland
 hyprland
 waybar
+grim
+slurp
+xdg-user-dirs
 otf-font-awesome
 fuzzel
 mpv
