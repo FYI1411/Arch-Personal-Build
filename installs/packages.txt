@@ -38,3 +38,5 @@ ntfs-3g
 nvtop
 bluez
 bluez-utils
+noto-fonts
+noise-suppression-for-voice
