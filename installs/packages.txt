@@ -39,4 +39,6 @@ nvtop
 bluez
 bluez-utils
 noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
 noise-suppression-for-voice
