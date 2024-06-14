@@ -3,3 +3,4 @@ xf86-video-ati
 amd-ucode
 nvidia
 nvidia-utils
+vulkan-radeon
