@@ -48,6 +48,7 @@ debug.log
 .config/Code/
 .config/VirtualBox/
 .config/user-dirs.*
+.config/heroic
 .aws
 .vscode
 .redhat
