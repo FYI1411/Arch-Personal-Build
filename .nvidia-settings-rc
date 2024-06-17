@@ -2,7 +2,7 @@
 # /home/pergon/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA Settings utility
-# Generated on Sat Jun 15 22:21:36 2024
+# Generated on Mon Jun 17 14:56:33 2024
 #
 
 # ConfigProperties:
@@ -12,8 +12,8 @@ DisplayStatusBar = Yes
 SliderTextEntries = Yes
 IncludeDisplayNameInConfigFile = No
 UpdateRulesOnProfileNameChange = Yes
-Timer = Thermal_Monitor_(GPU_0),Yes,1000
 Timer = Memory_Used_(GPU_0),Yes,3000
+Timer = Thermal_Monitor_(GPU_0),Yes,1000
 
 # Attributes:
 
