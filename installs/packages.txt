@@ -38,6 +38,7 @@ ntfs-3g
 nvtop
 bluez
 bluez-utils
+dunst
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
