@@ -4,8 +4,9 @@ dir="/sys/class/backlight"
 dir=$dir/$(ls $dir)
 max_bright=$(cat $dir/max_brightness)
 cur_bright=$(cat $dir/brightness)
+
 if [ "$bright" == "" ]; then
-	if [ "$cur_bright" == "$max_bright" ]; then
+	if [ "$cur_bright" -ge "$max_bright" ]; then
 		bright=0
 	else
 		bright="$max_bright"
@@ -17,4 +18,5 @@ elif [ ${bright: -1} == '-' ]; then
 	bright=${bright::${#bright}-1}
 	bright=$(($cur_bright - $bright))
 fi
+
 echo $bright > $dir/brightness 2> /dev/null
