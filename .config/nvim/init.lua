@@ -1,6 +1,5 @@
 --options
 vim.opt.number = true
-vim.opt.showmode = false
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
