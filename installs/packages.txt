@@ -10,7 +10,7 @@ otf-font-awesome
 fuzzel
 mpv
 alsa-utils
-vim
+nvim
 obs-studio
 fcitx5-im
 fcitx5-unikey

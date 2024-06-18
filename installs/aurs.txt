@@ -1,2 +1,2 @@
-visual-studio-code-bin
 mpvpaper
+neovim-web-devicons-git

@@ -49,6 +49,7 @@ debug.log
 .config/VirtualBox/
 .config/user-dirs.*
 .config/heroic
+.config/nvim/*.json
 .aws
 .vscode
 .redhat
