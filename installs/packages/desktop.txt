@@ -20,6 +20,7 @@ dunst
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
+otf-font-awesome
 fcitx5-im
 fcitx5-unikey
 fcitx5-anthy
