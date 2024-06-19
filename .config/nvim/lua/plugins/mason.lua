@@ -1,6 +1,6 @@
 return {
 	{
-		"williamboman/mason.nvim",	
+		"williamboman/mason.nvim",
 		config = function()
 			require("mason").setup()
 		end
@@ -17,7 +17,15 @@ return {
 		"neovim/nvim-lspconfig",
 		config = function()
 			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({})
+			lspconfig.lua_ls.setup({
+			  settings = {
+				Lua = {
+					diagnostics = {
+						globals = {'vim'},
+					},
+				}
+			  }
+			})
 			lspconfig.bashls.setup({})
 			lspconfig.pyright.setup({})
 			lspconfig.clangd.setup({})
