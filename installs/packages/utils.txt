@@ -1,0 +1,5 @@
+fzf
+tldr
+ncdu
+rsync
+reflector

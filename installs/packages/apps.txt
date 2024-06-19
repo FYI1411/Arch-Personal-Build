@@ -1,0 +1,5 @@
+mpv
+obs-studio
+firefox
+libreoffice
+rtorrent

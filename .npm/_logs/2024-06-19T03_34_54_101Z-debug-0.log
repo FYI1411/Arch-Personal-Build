@@ -1,0 +1,389 @@
+0 verbose cli /usr/bin/node /usr/bin/npm
+1 info using npm@10.8.1
+2 info using node@v22.3.0
+3 silly config load:file:/usr/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/pergon/.local/share/nvim/mason/staging/bash-language-server/.npmrc
+5 silly config load:file:/home/pergon/.npmrc
+6 silly config load:file:/etc/npmrc
+7 verbose title npm install bash-language-server@5.4.0
+8 verbose argv "install" "bash-language-server@5.4.0"
+9 verbose logfile logs-max:10 dir:/home/pergon/.npm/_logs/2024-06-19T03_34_54_101Z-
+10 verbose logfile /home/pergon/.npm/_logs/2024-06-19T03_34_54_101Z-debug-0.log
+11 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly fetch manifest bash-language-server@5.4.0
+15 silly packumentCache full:https://registry.npmjs.org/bash-language-server cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/bash-language-server 902ms (cache miss)
+17 silly packumentCache full:https://registry.npmjs.org/bash-language-server set size:undefined disposed:false
+18 silly placeDep ROOT bash-language-server@5.4.0 OK for: @mason/bash-language-server@1.0.0 want: 5.4.0
+19 silly fetch manifest editorconfig@2.0.0
+20 silly packumentCache full:https://registry.npmjs.org/editorconfig cache-miss
+21 silly fetch manifest fast-glob@3.3.2
+22 silly packumentCache full:https://registry.npmjs.org/fast-glob cache-miss
+23 silly fetch manifest fuzzy-search@3.2.1
+24 silly packumentCache full:https://registry.npmjs.org/fuzzy-search cache-miss
+25 silly fetch manifest node-fetch@2.7.0
+26 silly packumentCache full:https://registry.npmjs.org/node-fetch cache-miss
+27 silly fetch manifest turndown@7.1.3
+28 silly packumentCache full:https://registry.npmjs.org/turndown cache-miss
+29 silly fetch manifest vscode-languageserver@8.0.2
+30 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver cache-miss
+31 silly fetch manifest vscode-languageserver-textdocument@1.0.11
+32 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-textdocument cache-miss
+33 silly fetch manifest web-tree-sitter@0.22.5
+34 silly packumentCache full:https://registry.npmjs.org/web-tree-sitter cache-miss
+35 silly fetch manifest zod@3.22.4
+36 silly packumentCache full:https://registry.npmjs.org/zod cache-miss
+37 http fetch GET 200 https://registry.npmjs.org/editorconfig 131ms (cache miss)
+38 silly packumentCache full:https://registry.npmjs.org/editorconfig set size:undefined disposed:false
+39 http fetch GET 200 https://registry.npmjs.org/fast-glob 176ms (cache miss)
+40 silly packumentCache full:https://registry.npmjs.org/fast-glob set size:undefined disposed:false
+41 http fetch GET 200 https://registry.npmjs.org/vscode-languageserver-textdocument 210ms (cache miss)
+42 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-textdocument set size:undefined disposed:false
+43 http fetch GET 200 https://registry.npmjs.org/turndown 216ms (cache miss)
+44 silly packumentCache full:https://registry.npmjs.org/turndown set size:undefined disposed:false
+45 http fetch GET 200 https://registry.npmjs.org/vscode-languageserver 236ms (cache miss)
+46 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver set size:undefined disposed:false
+47 http fetch GET 200 https://registry.npmjs.org/node-fetch 253ms (cache miss)
+48 silly packumentCache full:https://registry.npmjs.org/node-fetch set size:undefined disposed:false
+49 http fetch GET 200 https://registry.npmjs.org/zod 636ms (cache miss)
+50 silly packumentCache full:https://registry.npmjs.org/zod set size:undefined disposed:false
+51 http fetch GET 200 https://registry.npmjs.org/fuzzy-search 790ms (cache miss)
+52 silly packumentCache full:https://registry.npmjs.org/fuzzy-search set size:undefined disposed:false
+53 http fetch GET 200 https://registry.npmjs.org/web-tree-sitter 790ms (cache miss)
+54 silly packumentCache full:https://registry.npmjs.org/web-tree-sitter set size:undefined disposed:false
+55 silly fetch manifest encoding@^0.1.0
+56 silly packumentCache full:https://registry.npmjs.org/encoding cache-miss
+57 http fetch GET 200 https://registry.npmjs.org/encoding 117ms (cache miss)
+58 silly packumentCache full:https://registry.npmjs.org/encoding set size:undefined disposed:false
+59 silly placeDep node_modules/bash-language-server editorconfig@2.0.0 OK for: bash-language-server@5.4.0 want: 2.0.0
+60 silly placeDep node_modules/bash-language-server fast-glob@3.3.2 OK for: bash-language-server@5.4.0 want: 3.3.2
+61 silly placeDep node_modules/bash-language-server fuzzy-search@3.2.1 OK for: bash-language-server@5.4.0 want: 3.2.1
+62 silly placeDep node_modules/bash-language-server node-fetch@2.7.0 OK for: bash-language-server@5.4.0 want: 2.7.0
+63 silly placeDep node_modules/bash-language-server turndown@7.1.3 OK for: bash-language-server@5.4.0 want: 7.1.3
+64 silly placeDep node_modules/bash-language-server vscode-languageserver@8.0.2 OK for: bash-language-server@5.4.0 want: 8.0.2
+65 silly placeDep node_modules/bash-language-server vscode-languageserver-textdocument@1.0.11 OK for: bash-language-server@5.4.0 want: 1.0.11
+66 silly placeDep node_modules/bash-language-server web-tree-sitter@0.22.5 OK for: bash-language-server@5.4.0 want: 0.22.5
+67 silly placeDep node_modules/bash-language-server zod@3.22.4 OK for: bash-language-server@5.4.0 want: 3.22.4
+68 silly fetch manifest @one-ini/wasm@0.1.1
+69 silly packumentCache full:https://registry.npmjs.org/@one-ini%2fwasm cache-miss
+70 silly fetch manifest commander@^11.0.0
+71 silly packumentCache full:https://registry.npmjs.org/commander cache-miss
+72 silly fetch manifest minimatch@9.0.2
+73 silly packumentCache full:https://registry.npmjs.org/minimatch cache-miss
+74 silly fetch manifest semver@^7.5.3
+75 silly packumentCache full:https://registry.npmjs.org/semver cache-miss
+76 silly fetch manifest @nodelib/fs.stat@^2.0.2
+77 silly packumentCache full:https://registry.npmjs.org/@nodelib%2ffs.stat cache-miss
+78 silly fetch manifest @nodelib/fs.walk@^1.2.3
+79 silly packumentCache full:https://registry.npmjs.org/@nodelib%2ffs.walk cache-miss
+80 silly fetch manifest glob-parent@^5.1.2
+81 silly packumentCache full:https://registry.npmjs.org/glob-parent cache-miss
+82 silly fetch manifest merge2@^1.3.0
+83 silly packumentCache full:https://registry.npmjs.org/merge2 cache-miss
+84 silly fetch manifest micromatch@^4.0.4
+85 silly packumentCache full:https://registry.npmjs.org/micromatch cache-miss
+86 silly fetch manifest whatwg-url@^5.0.0
+87 silly packumentCache full:https://registry.npmjs.org/whatwg-url cache-miss
+88 silly fetch manifest domino@^2.1.6
+89 silly packumentCache full:https://registry.npmjs.org/domino cache-miss
+90 http fetch GET 200 https://registry.npmjs.org/glob-parent 50ms (cache miss)
+91 silly packumentCache full:https://registry.npmjs.org/glob-parent set size:undefined disposed:false
+92 silly fetch manifest vscode-languageserver-protocol@3.17.2
+93 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-protocol cache-miss
+94 http fetch GET 200 https://registry.npmjs.org/semver 136ms (cache miss)
+95 silly packumentCache full:https://registry.npmjs.org/semver set size:undefined disposed:false
+96 http fetch GET 200 https://registry.npmjs.org/merge2 148ms (cache miss)
+97 silly packumentCache full:https://registry.npmjs.org/merge2 set size:undefined disposed:false
+98 http fetch GET 200 https://registry.npmjs.org/micromatch 159ms (cache miss)
+99 silly packumentCache full:https://registry.npmjs.org/micromatch set size:undefined disposed:false
+100 http fetch GET 200 https://registry.npmjs.org/minimatch 170ms (cache miss)
+101 silly packumentCache full:https://registry.npmjs.org/minimatch set size:undefined disposed:false
+102 http fetch GET 200 https://registry.npmjs.org/commander 195ms (cache miss)
+103 silly packumentCache full:https://registry.npmjs.org/commander set size:undefined disposed:false
+104 http fetch GET 200 https://registry.npmjs.org/whatwg-url 202ms (cache miss)
+105 silly packumentCache full:https://registry.npmjs.org/whatwg-url set size:undefined disposed:false
+106 http fetch GET 200 https://registry.npmjs.org/vscode-languageserver-protocol 156ms (cache miss)
+107 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-protocol set size:undefined disposed:false
+108 http fetch GET 200 https://registry.npmjs.org/@one-ini%2fwasm 629ms (cache miss)
+109 silly packumentCache full:https://registry.npmjs.org/@one-ini%2fwasm set size:undefined disposed:false
+110 http fetch GET 200 https://registry.npmjs.org/@nodelib%2ffs.stat 633ms (cache miss)
+111 silly packumentCache full:https://registry.npmjs.org/@nodelib%2ffs.stat set size:undefined disposed:false
+112 http fetch GET 200 https://registry.npmjs.org/@nodelib%2ffs.walk 656ms (cache miss)
+113 silly packumentCache full:https://registry.npmjs.org/@nodelib%2ffs.walk set size:undefined disposed:false
+114 http fetch GET 200 https://registry.npmjs.org/domino 772ms (cache miss)
+115 silly packumentCache full:https://registry.npmjs.org/domino set size:undefined disposed:false
+116 silly placeDep node_modules/bash-language-server @one-ini/wasm@0.1.1 OK for: editorconfig@2.0.0 want: 0.1.1
+117 silly placeDep node_modules/bash-language-server commander@11.1.0 OK for: editorconfig@2.0.0 want: ^11.0.0
+118 silly placeDep node_modules/bash-language-server minimatch@9.0.2 OK for: editorconfig@2.0.0 want: 9.0.2
+119 silly placeDep node_modules/bash-language-server semver@7.6.2 OK for: editorconfig@2.0.0 want: ^7.5.3
+120 silly fetch manifest brace-expansion@^2.0.1
+121 silly packumentCache full:https://registry.npmjs.org/brace-expansion cache-miss
+122 http fetch GET 200 https://registry.npmjs.org/brace-expansion 108ms (cache miss)
+123 silly packumentCache full:https://registry.npmjs.org/brace-expansion set size:undefined disposed:false
+124 silly placeDep node_modules/bash-language-server @nodelib/fs.stat@2.0.5 OK for: fast-glob@3.3.2 want: ^2.0.2
+125 silly placeDep node_modules/bash-language-server @nodelib/fs.walk@1.2.8 OK for: fast-glob@3.3.2 want: ^1.2.3
+126 silly placeDep node_modules/bash-language-server glob-parent@5.1.2 OK for: fast-glob@3.3.2 want: ^5.1.2
+127 silly placeDep node_modules/bash-language-server merge2@1.4.1 OK for: fast-glob@3.3.2 want: ^1.3.0
+128 silly placeDep node_modules/bash-language-server micromatch@4.0.7 OK for: fast-glob@3.3.2 want: ^4.0.4
+129 silly fetch manifest @nodelib/fs.scandir@2.1.5
+130 silly packumentCache full:https://registry.npmjs.org/@nodelib%2ffs.scandir cache-miss
+131 silly fetch manifest fastq@^1.6.0
+132 silly packumentCache full:https://registry.npmjs.org/fastq cache-miss
+133 silly fetch manifest is-glob@^4.0.1
+134 silly packumentCache full:https://registry.npmjs.org/is-glob cache-miss
+135 silly fetch manifest braces@^3.0.3
+136 silly packumentCache full:https://registry.npmjs.org/braces cache-miss
+137 silly fetch manifest picomatch@^2.3.1
+138 silly packumentCache full:https://registry.npmjs.org/picomatch cache-miss
+139 http fetch GET 200 https://registry.npmjs.org/braces 38ms (cache miss)
+140 silly packumentCache full:https://registry.npmjs.org/braces set size:undefined disposed:false
+141 http fetch GET 200 https://registry.npmjs.org/is-glob 42ms (cache miss)
+142 silly packumentCache full:https://registry.npmjs.org/is-glob set size:undefined disposed:false
+143 http fetch GET 200 https://registry.npmjs.org/picomatch 49ms (cache miss)
+144 silly packumentCache full:https://registry.npmjs.org/picomatch set size:undefined disposed:false
+145 http fetch GET 200 https://registry.npmjs.org/fastq 108ms (cache miss)
+146 silly packumentCache full:https://registry.npmjs.org/fastq set size:undefined disposed:false
+147 http fetch GET 200 https://registry.npmjs.org/@nodelib%2ffs.scandir 658ms (cache miss)
+148 silly packumentCache full:https://registry.npmjs.org/@nodelib%2ffs.scandir set size:undefined disposed:false
+149 silly placeDep node_modules/bash-language-server @nodelib/fs.scandir@2.1.5 OK for: @nodelib/fs.walk@1.2.8 want: 2.1.5
+150 silly placeDep node_modules/bash-language-server fastq@1.17.1 OK for: @nodelib/fs.walk@1.2.8 want: ^1.6.0
+151 silly fetch manifest run-parallel@^1.1.9
+152 silly packumentCache full:https://registry.npmjs.org/run-parallel cache-miss
+153 silly fetch manifest reusify@^1.0.4
+154 silly packumentCache full:https://registry.npmjs.org/reusify cache-miss
+155 http fetch GET 200 https://registry.npmjs.org/reusify 114ms (cache miss)
+156 silly packumentCache full:https://registry.npmjs.org/reusify set size:undefined disposed:false
+157 http fetch GET 200 https://registry.npmjs.org/run-parallel 132ms (cache miss)
+158 silly packumentCache full:https://registry.npmjs.org/run-parallel set size:undefined disposed:false
+159 silly placeDep node_modules/bash-language-server run-parallel@1.2.0 OK for: @nodelib/fs.scandir@2.1.5 want: ^1.1.9
+160 silly fetch manifest queue-microtask@^1.2.2
+161 silly packumentCache full:https://registry.npmjs.org/queue-microtask cache-miss
+162 http fetch GET 200 https://registry.npmjs.org/queue-microtask 122ms (cache miss)
+163 silly packumentCache full:https://registry.npmjs.org/queue-microtask set size:undefined disposed:false
+164 silly placeDep node_modules/bash-language-server reusify@1.0.4 OK for: fastq@1.17.1 want: ^1.0.4
+165 silly placeDep node_modules/bash-language-server is-glob@4.0.3 OK for: glob-parent@5.1.2 want: ^4.0.1
+166 silly fetch manifest is-extglob@^2.1.1
+167 silly packumentCache full:https://registry.npmjs.org/is-extglob cache-miss
+168 http fetch GET 200 https://registry.npmjs.org/is-extglob 38ms (cache miss)
+169 silly packumentCache full:https://registry.npmjs.org/is-extglob set size:undefined disposed:false
+170 silly placeDep node_modules/bash-language-server is-extglob@2.1.1 OK for: is-glob@4.0.3 want: ^2.1.1
+171 silly placeDep node_modules/bash-language-server braces@3.0.3 OK for: micromatch@4.0.7 want: ^3.0.3
+172 silly placeDep node_modules/bash-language-server picomatch@2.3.1 OK for: micromatch@4.0.7 want: ^2.3.1
+173 silly fetch manifest fill-range@^7.1.1
+174 silly packumentCache full:https://registry.npmjs.org/fill-range cache-miss
+175 http fetch GET 200 https://registry.npmjs.org/fill-range 39ms (cache miss)
+176 silly packumentCache full:https://registry.npmjs.org/fill-range set size:undefined disposed:false
+177 silly placeDep node_modules/bash-language-server fill-range@7.1.1 OK for: braces@3.0.3 want: ^7.1.1
+178 silly fetch manifest to-regex-range@^5.0.1
+179 silly packumentCache full:https://registry.npmjs.org/to-regex-range cache-miss
+180 http fetch GET 200 https://registry.npmjs.org/to-regex-range 39ms (cache miss)
+181 silly packumentCache full:https://registry.npmjs.org/to-regex-range set size:undefined disposed:false
+182 silly placeDep node_modules/bash-language-server to-regex-range@5.0.1 OK for: fill-range@7.1.1 want: ^5.0.1
+183 silly fetch manifest is-number@^7.0.0
+184 silly packumentCache full:https://registry.npmjs.org/is-number cache-miss
+185 http fetch GET 200 https://registry.npmjs.org/is-number 36ms (cache miss)
+186 silly packumentCache full:https://registry.npmjs.org/is-number set size:undefined disposed:false
+187 silly placeDep node_modules/bash-language-server brace-expansion@2.0.1 OK for: minimatch@9.0.2 want: ^2.0.1
+188 silly fetch manifest balanced-match@^1.0.0
+189 silly packumentCache full:https://registry.npmjs.org/balanced-match cache-miss
+190 http fetch GET 200 https://registry.npmjs.org/balanced-match 112ms (cache miss)
+191 silly packumentCache full:https://registry.npmjs.org/balanced-match set size:undefined disposed:false
+192 silly placeDep node_modules/bash-language-server balanced-match@1.0.2 OK for: brace-expansion@2.0.1 want: ^1.0.0
+193 silly placeDep node_modules/bash-language-server whatwg-url@5.0.0 OK for: node-fetch@2.7.0 want: ^5.0.0
+194 silly fetch manifest tr46@~0.0.3
+195 silly packumentCache full:https://registry.npmjs.org/tr46 cache-miss
+196 silly fetch manifest webidl-conversions@^3.0.0
+197 silly packumentCache full:https://registry.npmjs.org/webidl-conversions cache-miss
+198 http fetch GET 200 https://registry.npmjs.org/tr46 104ms (cache miss)
+199 silly packumentCache full:https://registry.npmjs.org/tr46 set size:undefined disposed:false
+200 http fetch GET 200 https://registry.npmjs.org/webidl-conversions 106ms (cache miss)
+201 silly packumentCache full:https://registry.npmjs.org/webidl-conversions set size:undefined disposed:false
+202 silly placeDep node_modules/bash-language-server queue-microtask@1.2.3 OK for: run-parallel@1.2.0 want: ^1.2.2
+203 silly placeDep node_modules/bash-language-server is-number@7.0.0 OK for: to-regex-range@5.0.1 want: ^7.0.0
+204 silly placeDep node_modules/bash-language-server domino@2.1.6 OK for: turndown@7.1.3 want: ^2.1.6
+205 silly placeDep node_modules/bash-language-server vscode-languageserver-protocol@3.17.2 OK for: vscode-languageserver@8.0.2 want: 3.17.2
+206 silly fetch manifest vscode-jsonrpc@8.0.2
+207 silly packumentCache full:https://registry.npmjs.org/vscode-jsonrpc cache-miss
+208 silly fetch manifest vscode-languageserver-types@3.17.2
+209 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-types cache-miss
+210 http fetch GET 200 https://registry.npmjs.org/vscode-jsonrpc 119ms (cache miss)
+211 silly packumentCache full:https://registry.npmjs.org/vscode-jsonrpc set size:undefined disposed:false
+212 http fetch GET 200 https://registry.npmjs.org/vscode-languageserver-types 698ms (cache miss)
+213 silly packumentCache full:https://registry.npmjs.org/vscode-languageserver-types set size:undefined disposed:false
+214 silly placeDep node_modules/bash-language-server vscode-jsonrpc@8.0.2 OK for: vscode-languageserver-protocol@3.17.2 want: 8.0.2
+215 silly placeDep node_modules/bash-language-server vscode-languageserver-types@3.17.2 OK for: vscode-languageserver-protocol@3.17.2 want: 3.17.2
+216 silly placeDep node_modules/bash-language-server tr46@0.0.3 OK for: whatwg-url@5.0.0 want: ~0.0.3
+217 silly placeDep node_modules/bash-language-server webidl-conversions@3.0.1 OK for: whatwg-url@5.0.0 want: ^3.0.0
+218 silly reify moves {}
+219 silly audit bulk request {
+219 silly audit   'bash-language-server': [ '5.4.0' ],
+219 silly audit   editorconfig: [ '2.0.0' ],
+219 silly audit   'fast-glob': [ '3.3.2' ],
+219 silly audit   'fuzzy-search': [ '3.2.1' ],
+219 silly audit   'node-fetch': [ '2.7.0' ],
+219 silly audit   turndown: [ '7.1.3' ],
+219 silly audit   'vscode-languageserver': [ '8.0.2' ],
+219 silly audit   'vscode-languageserver-textdocument': [ '1.0.11' ],
+219 silly audit   'web-tree-sitter': [ '0.22.5' ],
+219 silly audit   zod: [ '3.22.4' ],
+219 silly audit   '@one-ini/wasm': [ '0.1.1' ],
+219 silly audit   commander: [ '11.1.0' ],
+219 silly audit   minimatch: [ '9.0.2' ],
+219 silly audit   semver: [ '7.6.2' ],
+219 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+219 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+219 silly audit   'glob-parent': [ '5.1.2' ],
+219 silly audit   merge2: [ '1.4.1' ],
+219 silly audit   micromatch: [ '4.0.7' ],
+219 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+219 silly audit   fastq: [ '1.17.1' ],
+219 silly audit   'run-parallel': [ '1.2.0' ],
+219 silly audit   reusify: [ '1.0.4' ],
+219 silly audit   'is-glob': [ '4.0.3' ],
+219 silly audit   'is-extglob': [ '2.1.1' ],
+219 silly audit   braces: [ '3.0.3' ],
+219 silly audit   picomatch: [ '2.3.1' ],
+219 silly audit   'fill-range': [ '7.1.1' ],
+219 silly audit   'to-regex-range': [ '5.0.1' ],
+219 silly audit   'brace-expansion': [ '2.0.1' ],
+219 silly audit   'balanced-match': [ '1.0.2' ],
+219 silly audit   'whatwg-url': [ '5.0.0' ],
+219 silly audit   'queue-microtask': [ '1.2.3' ],
+219 silly audit   'is-number': [ '7.0.0' ],
+219 silly audit   domino: [ '2.1.6' ],
+219 silly audit   'vscode-languageserver-protocol': [ '3.17.2' ],
+219 silly audit   'vscode-jsonrpc': [ '8.0.2' ],
+219 silly audit   'vscode-languageserver-types': [ '3.17.2' ],
+219 silly audit   tr46: [ '0.0.3' ],
+219 silly audit   'webidl-conversions': [ '3.0.1' ]
+219 silly audit }
+220 silly tarball no local data for bash-language-server@https://registry.npmjs.org/bash-language-server/-/bash-language-server-5.4.0.tgz. Extracting by manifest.
+221 silly tarball no local data for vscode-languageserver-types@https://registry.npmjs.org/vscode-languageserver-types/-/vscode-languageserver-types-3.17.2.tgz. Extracting by manifest.
+222 silly tarball no local data for tr46@https://registry.npmjs.org/tr46/-/tr46-0.0.3.tgz. Extracting by manifest.
+223 silly tarball no local data for vscode-jsonrpc@https://registry.npmjs.org/vscode-jsonrpc/-/vscode-jsonrpc-8.0.2.tgz. Extracting by manifest.
+224 silly tarball no local data for webidl-conversions@https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-3.0.1.tgz. Extracting by manifest.
+225 silly tarball no local data for vscode-languageserver-protocol@https://registry.npmjs.org/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.17.2.tgz. Extracting by manifest.
+226 silly tarball no local data for is-number@https://registry.npmjs.org/is-number/-/is-number-7.0.0.tgz. Extracting by manifest.
+227 silly tarball no local data for domino@https://registry.npmjs.org/domino/-/domino-2.1.6.tgz. Extracting by manifest.
+228 silly tarball no local data for queue-microtask@https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz. Extracting by manifest.
+229 silly tarball no local data for brace-expansion@https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.1.tgz. Extracting by manifest.
+230 silly tarball no local data for whatwg-url@https://registry.npmjs.org/whatwg-url/-/whatwg-url-5.0.0.tgz. Extracting by manifest.
+231 silly tarball no local data for balanced-match@https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz. Extracting by manifest.
+232 silly tarball no local data for to-regex-range@https://registry.npmjs.org/to-regex-range/-/to-regex-range-5.0.1.tgz. Extracting by manifest.
+233 silly tarball no local data for picomatch@https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz. Extracting by manifest.
+234 silly tarball no local data for braces@https://registry.npmjs.org/braces/-/braces-3.0.3.tgz. Extracting by manifest.
+235 silly tarball no local data for fill-range@https://registry.npmjs.org/fill-range/-/fill-range-7.1.1.tgz. Extracting by manifest.
+236 silly tarball no local data for is-extglob@https://registry.npmjs.org/is-extglob/-/is-extglob-2.1.1.tgz. Extracting by manifest.
+237 silly tarball no local data for is-glob@https://registry.npmjs.org/is-glob/-/is-glob-4.0.3.tgz. Extracting by manifest.
+238 silly tarball no local data for reusify@https://registry.npmjs.org/reusify/-/reusify-1.0.4.tgz. Extracting by manifest.
+239 silly tarball no local data for run-parallel@https://registry.npmjs.org/run-parallel/-/run-parallel-1.2.0.tgz. Extracting by manifest.
+240 silly tarball no local data for fastq@https://registry.npmjs.org/fastq/-/fastq-1.17.1.tgz. Extracting by manifest.
+241 silly tarball no local data for @nodelib/fs.scandir@https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz. Extracting by manifest.
+242 silly tarball no local data for micromatch@https://registry.npmjs.org/micromatch/-/micromatch-4.0.7.tgz. Extracting by manifest.
+243 silly tarball no local data for glob-parent@https://registry.npmjs.org/glob-parent/-/glob-parent-5.1.2.tgz. Extracting by manifest.
+244 silly tarball no local data for @nodelib/fs.walk@https://registry.npmjs.org/@nodelib/fs.walk/-/fs.walk-1.2.8.tgz. Extracting by manifest.
+245 silly tarball no local data for merge2@https://registry.npmjs.org/merge2/-/merge2-1.4.1.tgz. Extracting by manifest.
+246 silly tarball no local data for @nodelib/fs.stat@https://registry.npmjs.org/@nodelib/fs.stat/-/fs.stat-2.0.5.tgz. Extracting by manifest.
+247 silly tarball no local data for semver@https://registry.npmjs.org/semver/-/semver-7.6.2.tgz. Extracting by manifest.
+248 silly tarball no local data for minimatch@https://registry.npmjs.org/minimatch/-/minimatch-9.0.2.tgz. Extracting by manifest.
+249 silly tarball no local data for commander@https://registry.npmjs.org/commander/-/commander-11.1.0.tgz. Extracting by manifest.
+250 silly tarball no local data for @one-ini/wasm@https://registry.npmjs.org/@one-ini/wasm/-/wasm-0.1.1.tgz. Extracting by manifest.
+251 silly tarball no local data for zod@https://registry.npmjs.org/zod/-/zod-3.22.4.tgz. Extracting by manifest.
+252 silly tarball no local data for web-tree-sitter@https://registry.npmjs.org/web-tree-sitter/-/web-tree-sitter-0.22.5.tgz. Extracting by manifest.
+253 silly tarball no local data for vscode-languageserver-textdocument@https://registry.npmjs.org/vscode-languageserver-textdocument/-/vscode-languageserver-textdocument-1.0.11.tgz. Extracting by manifest.
+254 silly tarball no local data for vscode-languageserver@https://registry.npmjs.org/vscode-languageserver/-/vscode-languageserver-8.0.2.tgz. Extracting by manifest.
+255 silly tarball no local data for turndown@https://registry.npmjs.org/turndown/-/turndown-7.1.3.tgz. Extracting by manifest.
+256 silly tarball no local data for node-fetch@https://registry.npmjs.org/node-fetch/-/node-fetch-2.7.0.tgz. Extracting by manifest.
+257 silly tarball no local data for fuzzy-search@https://registry.npmjs.org/fuzzy-search/-/fuzzy-search-3.2.1.tgz. Extracting by manifest.
+258 silly tarball no local data for fast-glob@https://registry.npmjs.org/fast-glob/-/fast-glob-3.3.2.tgz. Extracting by manifest.
+259 silly tarball no local data for editorconfig@https://registry.npmjs.org/editorconfig/-/editorconfig-2.0.0.tgz. Extracting by manifest.
+260 http fetch GET 200 https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-3.0.1.tgz 87ms (cache miss)
+261 http fetch GET 200 https://registry.npmjs.org/is-number/-/is-number-7.0.0.tgz 86ms (cache miss)
+262 http fetch GET 200 https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz 87ms (cache miss)
+263 http fetch GET 200 https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.1.tgz 87ms (cache miss)
+264 http fetch GET 200 https://registry.npmjs.org/tr46/-/tr46-0.0.3.tgz 102ms (cache miss)
+265 http fetch GET 200 https://registry.npmjs.org/fill-range/-/fill-range-7.1.1.tgz 107ms (cache miss)
+266 http fetch GET 200 https://registry.npmjs.org/is-extglob/-/is-extglob-2.1.1.tgz 121ms (cache miss)
+267 http fetch GET 200 https://registry.npmjs.org/braces/-/braces-3.0.3.tgz 122ms (cache miss)
+268 http fetch GET 200 https://registry.npmjs.org/is-glob/-/is-glob-4.0.3.tgz 123ms (cache miss)
+269 http fetch GET 200 https://registry.npmjs.org/reusify/-/reusify-1.0.4.tgz 151ms (cache miss)
+270 http fetch GET 200 https://registry.npmjs.org/run-parallel/-/run-parallel-1.2.0.tgz 150ms (cache miss)
+271 http fetch GET 200 https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz 155ms (cache miss)
+272 http fetch GET 200 https://registry.npmjs.org/to-regex-range/-/to-regex-range-5.0.1.tgz 159ms (cache miss)
+273 http fetch GET 200 https://registry.npmjs.org/whatwg-url/-/whatwg-url-5.0.0.tgz 172ms (cache miss)
+274 http fetch GET 200 https://registry.npmjs.org/fastq/-/fastq-1.17.1.tgz 173ms (cache miss)
+275 http fetch GET 200 https://registry.npmjs.org/glob-parent/-/glob-parent-5.1.2.tgz 177ms (cache miss)
+276 http fetch GET 200 https://registry.npmjs.org/micromatch/-/micromatch-4.0.7.tgz 181ms (cache miss)
+277 http fetch GET 200 https://registry.npmjs.org/merge2/-/merge2-1.4.1.tgz 184ms (cache miss)
+278 http fetch GET 200 https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz 205ms (cache miss)
+279 http fetch GET 200 https://registry.npmjs.org/commander/-/commander-11.1.0.tgz 204ms (cache miss)
+280 http fetch GET 200 https://registry.npmjs.org/domino/-/domino-2.1.6.tgz 211ms (cache miss)
+281 http fetch GET 200 https://registry.npmjs.org/vscode-languageserver-types/-/vscode-languageserver-types-3.17.2.tgz 216ms (cache miss)
+282 http fetch GET 200 https://registry.npmjs.org/vscode-languageserver-textdocument/-/vscode-languageserver-textdocument-1.0.11.tgz 208ms (cache miss)
+283 http fetch GET 200 https://registry.npmjs.org/node-fetch/-/node-fetch-2.7.0.tgz 219ms (cache miss)
+284 http fetch GET 200 https://registry.npmjs.org/vscode-jsonrpc/-/vscode-jsonrpc-8.0.2.tgz 229ms (cache miss)
+285 http fetch GET 200 https://registry.npmjs.org/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.17.2.tgz 264ms (cache miss)
+286 http fetch GET 200 https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz 263ms (cache miss)
+287 http fetch GET 200 https://registry.npmjs.org/semver/-/semver-7.6.2.tgz 271ms (cache miss)
+288 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 303ms
+289 silly audit report {}
+290 http fetch GET 200 https://registry.npmjs.org/@nodelib/fs.stat/-/fs.stat-2.0.5.tgz 283ms (cache miss)
+291 http fetch GET 200 https://registry.npmjs.org/@nodelib/fs.walk/-/fs.walk-1.2.8.tgz 286ms (cache miss)
+292 http fetch GET 200 https://registry.npmjs.org/turndown/-/turndown-7.1.3.tgz 292ms (cache miss)
+293 http fetch GET 200 https://registry.npmjs.org/fast-glob/-/fast-glob-3.3.2.tgz 302ms (cache miss)
+294 http fetch GET 200 https://registry.npmjs.org/web-tree-sitter/-/web-tree-sitter-0.22.5.tgz 316ms (cache miss)
+295 http fetch GET 200 https://registry.npmjs.org/editorconfig/-/editorconfig-2.0.0.tgz 322ms (cache miss)
+296 http fetch GET 200 https://registry.npmjs.org/fuzzy-search/-/fuzzy-search-3.2.1.tgz 325ms (cache miss)
+297 http fetch GET 200 https://registry.npmjs.org/minimatch/-/minimatch-9.0.2.tgz 332ms (cache miss)
+298 http fetch GET 200 https://registry.npmjs.org/vscode-languageserver/-/vscode-languageserver-8.0.2.tgz 331ms (cache miss)
+299 http fetch GET 200 https://registry.npmjs.org/zod/-/zod-3.22.4.tgz 337ms (cache miss)
+300 http fetch GET 200 https://registry.npmjs.org/bash-language-server/-/bash-language-server-5.4.0.tgz 357ms (cache miss)
+301 http fetch GET 200 https://registry.npmjs.org/@one-ini/wasm/-/wasm-0.1.1.tgz 347ms (cache miss)
+302 silly ADD node_modules/bash-language-server
+303 silly ADD node_modules/bash-language-server/node_modules/webidl-conversions
+304 silly ADD node_modules/bash-language-server/node_modules/tr46
+305 silly ADD node_modules/bash-language-server/node_modules/vscode-languageserver-types
+306 silly ADD node_modules/bash-language-server/node_modules/vscode-jsonrpc
+307 silly ADD node_modules/bash-language-server/node_modules/vscode-languageserver-protocol
+308 silly ADD node_modules/bash-language-server/node_modules/domino
+309 silly ADD node_modules/bash-language-server/node_modules/is-number
+310 silly ADD node_modules/bash-language-server/node_modules/queue-microtask
+311 silly ADD node_modules/bash-language-server/node_modules/whatwg-url
+312 silly ADD node_modules/bash-language-server/node_modules/balanced-match
+313 silly ADD node_modules/bash-language-server/node_modules/brace-expansion
+314 silly ADD node_modules/bash-language-server/node_modules/to-regex-range
+315 silly ADD node_modules/bash-language-server/node_modules/fill-range
+316 silly ADD node_modules/bash-language-server/node_modules/picomatch
+317 silly ADD node_modules/bash-language-server/node_modules/braces
+318 silly ADD node_modules/bash-language-server/node_modules/is-extglob
+319 silly ADD node_modules/bash-language-server/node_modules/is-glob
+320 silly ADD node_modules/bash-language-server/node_modules/reusify
+321 silly ADD node_modules/bash-language-server/node_modules/run-parallel
+322 silly ADD node_modules/bash-language-server/node_modules/fastq
+323 silly ADD node_modules/bash-language-server/node_modules/@nodelib/fs.scandir
+324 silly ADD node_modules/bash-language-server/node_modules/micromatch
+325 silly ADD node_modules/bash-language-server/node_modules/merge2
+326 silly ADD node_modules/bash-language-server/node_modules/glob-parent
+327 silly ADD node_modules/bash-language-server/node_modules/@nodelib/fs.walk
+328 silly ADD node_modules/bash-language-server/node_modules/@nodelib/fs.stat
+329 silly ADD node_modules/bash-language-server/node_modules/semver
+330 silly ADD node_modules/bash-language-server/node_modules/minimatch
+331 silly ADD node_modules/bash-language-server/node_modules/commander
+332 silly ADD node_modules/bash-language-server/node_modules/@one-ini/wasm
+333 silly ADD node_modules/bash-language-server/node_modules/zod
+334 silly ADD node_modules/bash-language-server/node_modules/web-tree-sitter
+335 silly ADD node_modules/bash-language-server/node_modules/vscode-languageserver-textdocument
+336 silly ADD node_modules/bash-language-server/node_modules/vscode-languageserver
+337 silly ADD node_modules/bash-language-server/node_modules/turndown
+338 silly ADD node_modules/bash-language-server/node_modules/node-fetch
+339 silly ADD node_modules/bash-language-server/node_modules/fuzzy-search
+340 silly ADD node_modules/bash-language-server/node_modules/fast-glob
+341 silly ADD node_modules/bash-language-server/node_modules/editorconfig
+342 verbose cwd /home/pergon/.local/share/nvim/mason/staging/bash-language-server
+343 verbose os Linux 6.9.5-1-cachyos-eevdf
+344 verbose node v22.3.0
+345 verbose npm  v10.8.1
+346 verbose exit 0
+347 info ok
