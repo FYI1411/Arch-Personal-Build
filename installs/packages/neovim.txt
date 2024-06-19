@@ -1,2 +1,5 @@
 neovim
 npm
+python
+python-black
+clang
