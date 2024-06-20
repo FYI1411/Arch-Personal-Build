@@ -50,6 +50,7 @@ debug.log
 .config/user-dirs.*
 .config/heroic
 .config/nvim/*.json
+.config/spotify/
 .aws
 .vscode
 .redhat
