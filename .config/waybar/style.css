@@ -12,9 +12,11 @@ window#waybar {
     transition-duration: .5s;
 }
 
+/*
 window#waybar.hidden {
     opacity: 0.2;
 }
+*/
 
 /*
 window#waybar.empty {
@@ -25,6 +27,7 @@ window#waybar.solo {
 }
 */
 
+/*
 window#waybar.termite {
     background-color: #3F3F3F;
 }
@@ -33,6 +36,7 @@ window#waybar.chromium {
     background-color: #000000;
     border: none;
 }
+*/
 
 button {
     /* Use box-shadow instead of border so the text isn't offset */
@@ -157,14 +161,6 @@ label:focus {
     color: #ee82ee;
 }
 
-#wireplumber {
-    color: #000000;
-}
-
-#wireplumber.muted {
-    color: #f53c3c;
-}
-
 #custom-media {
     background-color: #66cc99;
     color: #2a5c45;
@@ -192,51 +188,10 @@ label:focus {
     color: #eb4d4b;
 }
 
-#mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
-}
-
-#mpd.disconnected {
-    background-color: #f53c3c;
-}
-
-#mpd.stopped {
-    background-color: #90b1b1;
-}
-
-#mpd.paused {
-    background-color: #51a37a;
-}
-
 #language {
     background: #00b093;
     color: #740864;
     padding: 0 5px;
     margin: 0 5px;
     min-width: 16px;
-}
-
-#keyboard-state {
-    background: #97e1ad;
-    color: #000000;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state > label {
-    padding: 0 5px;
-}
-
-#keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad.empty {
-	background-color: transparent;
 }
