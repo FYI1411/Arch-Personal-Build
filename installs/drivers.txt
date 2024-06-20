@@ -2,6 +2,7 @@ mesa
 xf86-video-ati
 amd-ucode
 vulkan-radeon
+lib32-vulkan-radeon
 lib32-nvidia-utils
 lib32-opencl-nvidia
 nvidia
