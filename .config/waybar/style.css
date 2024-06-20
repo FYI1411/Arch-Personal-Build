@@ -72,6 +72,10 @@ button:hover {
     border-bottom: 3px solid #ffffff;
 }
 
+#tray {
+	padding: 0 5px;
+}
+
 #clock,
 #battery,
 #disk,
@@ -79,7 +83,6 @@ button:hover {
 #pulseaudio,
 #wireplumber,
 #custom-media,
-#tray,
 #mode,
 #scratchpad,
 #mpd {
@@ -103,17 +106,15 @@ button:hover {
 }
 
 #clock {
-    background-color: #64727D;
+	color: #ffffff;
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    color: #B0C4DE;
 }
 
 #battery.charging, #battery.plugged {
-    color: #ffffff;
-    background-color: #26A65B;
+    color: #00FF7F;
 }
 
 @keyframes blink {
@@ -124,8 +125,7 @@ button:hover {
 }
 
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
+    color: #ed4b4d;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -142,30 +142,27 @@ label:focus {
 }
 
 #network {
-    background-color: #2980b9;
+	color: #1E90FF;
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    color: #f53c3c;
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
+    color: #FF1493;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+    color: #EE82EE;
 }
 
 #wireplumber {
-    background-color: #fff0f5;
     color: #000000;
 }
 
 #wireplumber.muted {
-    background-color: #f53c3c;
+    color: #f53c3c;
 }
 
 #custom-media {
@@ -183,7 +180,7 @@ label:focus {
 }
 
 #tray {
-    background-color: #2980b9;
+    color: #ffffff;
 }
 
 #tray > .passive {
@@ -192,7 +189,7 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+    color: #eb4d4b;
 }
 
 #mpd {
