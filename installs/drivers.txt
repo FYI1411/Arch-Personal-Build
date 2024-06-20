@@ -1,5 +1,5 @@
 mesa
-xf86-video-ati
+xf86-video-amdgpu
 amd-ucode
 vulkan-radeon
 lib32-vulkan-radeon

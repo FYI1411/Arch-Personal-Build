@@ -1,3 +1,5 @@
 grim
 slurp
 pass
+nano
+vim

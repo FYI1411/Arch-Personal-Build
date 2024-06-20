@@ -26,8 +26,8 @@ export TMP_FOLDER="tmp"
 export MIN_DAYS="7"
 find ~/$TMP_FOLDER/ -mindepth 1 -maxdepth 1 -mtime +$MIN_DAYS -exec rm {} +
 
-# set editor as vim
-export EDITOR="vim"
+# set editor as nvim
+export EDITOR="nvim"
 
 # dotfile customization
 if tput setaf 1 &> /dev/null; then
