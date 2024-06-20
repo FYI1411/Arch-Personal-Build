@@ -9,3 +9,4 @@ nvidia
 nvidia-settings
 nvidia-utils
 opencl-nvidia
+egl-wayland
