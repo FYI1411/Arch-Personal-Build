@@ -134,4 +134,4 @@ export PS1;
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 # END_KITTY_SHELL_INTEGRATION
 
-LD_PRELOAD=/usr/lib/spotify-adblock.so spotify
+export LD_PRELOAD=/usr/lib/spotify-adblock.so spotify
