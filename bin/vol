@@ -1,7 +1,7 @@
 #! /bin/bash
 volume=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{ print $5 }')
-msgTag="myvolume"
 mute=$(pactl get-sink-mute @DEFAULT_SINK@ | awk '{ print $2 }')
+msgTag="myvolume"
 
 if [[ $volume == 0 || "$mute" == "yes" ]]; then
     # Show the sound muted notification
