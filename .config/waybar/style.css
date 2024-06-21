@@ -154,11 +154,11 @@ label:focus {
 }
 
 #pulseaudio {
-    color: #fb0198;
+	color: #1e90ff
 }
 
 #pulseaudio.muted {
-    color: #ee82ee;
+    color: #808080;
 }
 
 #custom-media {
