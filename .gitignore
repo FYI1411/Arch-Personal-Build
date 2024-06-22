@@ -48,9 +48,10 @@ debug.log
 .config/Code/
 .config/VirtualBox/
 .config/user-dirs.*
-.config/heroic
+.config/heroic/
 .config/nvim/*.json
 .config/spotify/
+.config/qBittorrent/
 .aws
 .vscode
 .redhat
