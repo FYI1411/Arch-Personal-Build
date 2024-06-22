@@ -61,3 +61,5 @@ Pictures/*
 Games/*
 .nv/*
 .nvidia-settings-rc
+.wine
+Documents/
