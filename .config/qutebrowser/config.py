@@ -143,3 +143,7 @@ config.set('content.local_content_can_access_file_urls', False, 'file:///home/pe
 config.bind('xb', 'config-cycle statusbar.show always never')
 config.bind('xt', 'config-cycle tabs.show always never')
 config.bind('xx', 'config-cycle statusbar.show always never;; config-cycle tabs.show always never')
+
+config.url.searchengines = {
+    'DEFAULT':  'https://google.com/search?hl=en&q={}',
+}
