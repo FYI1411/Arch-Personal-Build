@@ -28,15 +28,11 @@ Desktop/
 Downloads/*
 tmp/*
 debug.log
-.emacs.d/*
-!.emacs.d/init.el
 .config/pavucontrol.ini
 .config/pulse/
 .config/QtProject.conf
 .config/dconf/
 .config/ibus/
-.config/nitrogen/
-.config/qtile/__pycache__/
 .config/qutebrowser/*
 !.config/qutebrowser/config.py
 .config/cef_user_data/
@@ -46,16 +42,16 @@ debug.log
 .config/libreoffice/
 .config/obs-studio/
 .config/Code/
-.config/VirtualBox/
 .config/user-dirs.*
 .config/heroic/
 .config/nvim/*.json
 .config/spotify/
 .config/qBittorrent/
+.config/qutebrowser/*
+!.config/qutebrowser/config.py
+!.config/qutebrowser/quickmarks
 .aws
 .vscode
-.redhat
-VirtualBox VMs
 .pulse-cookie
 Pictures/*
 Games/*
