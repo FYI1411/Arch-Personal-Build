@@ -5,7 +5,7 @@ vulkan-radeon
 lib32-vulkan-radeon
 lib32-nvidia-utils
 lib32-opencl-nvidia
-nvidia
+nvidia-dkms
 nvidia-settings
 nvidia-utils
 opencl-nvidia
