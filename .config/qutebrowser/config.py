@@ -140,15 +140,17 @@ config.set('content.local_content_can_access_remote_urls', True, 'file:///home/p
 config.set('content.local_content_can_access_file_urls', False, 'file:///home/pergon/.local/share/qutebrowser/userscripts/*')
 
 # my config
+# hide top / bottom bar
 config.bind('xb', 'config-cycle statusbar.show always never')
 config.bind('xt', 'config-cycle tabs.show always never')
 config.bind('xx', 'config-cycle statusbar.show always never;; config-cycle tabs.show always never')
 
+# change ddg to google
 c.url.searchengines = {
     'DEFAULT':  'https://google.com/search?hl=en&q={}',
 }
-
 c.url.start_pages = ['https://google.com/']
 c.url.default_page = 'https://google.com/'
 
+# for python-adblock
 config.set('content.blocking.method', 'both')
