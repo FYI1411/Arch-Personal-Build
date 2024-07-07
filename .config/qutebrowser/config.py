@@ -149,5 +149,6 @@ c.url.searchengines = {
 }
 
 c.url.start_pages = ['https://google.com/']
+c.url.default_page = 'https://google.com/'
 
 config.set('content.blocking.method', 'both')
