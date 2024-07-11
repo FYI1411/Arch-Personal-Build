@@ -1,0 +1,14 @@
+# options to add in case rebuild
+# /etc/default/grub
+GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet nvidia-drm.modeset=1 nvidia_drm.fbdev=1 amd_pstate=active"
+GRUB_DISABLE_OS_PROBER=false
+GRUB_TIMEOUT=-1
+
+# /etc/systemd/system/getty@tty1.service.d/autologin.conf
+[Service]
+ExecStart=
+ExecStart=-/sbin/agetty -o '-p -f -- \\u' --noclear --autologin pergon %I $TERM
+
+# /etc/sudoers
+%wheel ALL=(ALL:ALL) nopasswd:ALL
+Defaults passwd_timeout=0
