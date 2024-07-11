@@ -22,7 +22,7 @@ main() {
 		-wholename "*.mp4" ! -wholename "*$last_wp" | shuf -n ${num}) \
 		> /dev/null 2>&1
 	else
-		$cmd "$opt" '*' $@ > /dev/null 2>&1
+		$cmd "$opt" '*' "$@" > /dev/null 2>&1
 	fi
 }
 
