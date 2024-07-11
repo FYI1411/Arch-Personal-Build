@@ -4,7 +4,7 @@ num=1
 # when num > the files count => shuf return the max num
 # else only return 1 file
 cmd='mpvpaper -o'
-opt='--gapless-audio=no --loop-playlist --no-audio'
+opt='--loop-playlist --no-audio'
 last_wp=$(ps ax ww | grep -v grep | \
 grep mpvpaper | awk -F '/' '{print $NF}')
 # space in case file doesn't exist
