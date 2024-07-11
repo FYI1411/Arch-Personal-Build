@@ -1,0 +1,22 @@
+# options to add in case rebuild
+file='/etc/default/grub'
+sed -i \
+'/GRUB_CMDLINE_LINUX_DEFAULT=/c\GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet nvidia-drm.modeset=1 nvidia_drm.fbdev=1 amd_pstate=active"' \
+$file
+sed -i '/GRUB_DISABLE_OS_PROBER=/c\GRUB_DISABLE_OS_PROBER=false' $file
+sed -i '/GRUB_TIMEOUT=/c\GRUB_TIMEOUT=-1' $file
+
+file='/etc/systemd/system/getty@tty1.service.d'
+mkdir -p $file && touch "$file"/autologin.conf
+file="$file"/autologin.conf
+tee $file > /dev/null <<EOT
+[Service]
+ExecStart=
+ExecStart=-/sbin/agetty -o '-p -f -- \\u' --noclear --autologin pergon %I $TERM
+EOT
+
+file='/etc/sudoers'
+sed -i '/# %wheel ALL=(ALL:ALL) NOPASSWD/c\%wheel ALL=(ALL:ALL) NOPASSWD: ALL' $file
+if [[ "$(grep -c 'Defaults passwd_timeout=' $file)" == 0 ]]; then
+	echo 'Defaults passwd_timeout=0' >> $file
+fi
