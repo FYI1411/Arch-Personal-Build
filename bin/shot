@@ -1,3 +1,5 @@
 #! /bin/bash
 
-grim -g "$(slurp -d)" - | wl-copy && wl-paste > ~/Pictures/$(date +'%s_grim.png')
+path=~/Pictures/$(date +'%s_grim.png')
+grim -g "$(slurp -d)" - | wl-copy && wl-paste > $path
+dunstify -I $path "Image taken"
