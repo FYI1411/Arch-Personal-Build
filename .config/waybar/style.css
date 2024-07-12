@@ -83,8 +83,6 @@ button:hover {
 #clock,
 #battery,
 #disk,
-#network,
-#pulseaudio,
 #wireplumber,
 #custom-media,
 #mode,
@@ -146,11 +144,29 @@ label:focus {
 }
 
 #network {
+	padding-right: 10px;
+	padding-left: 5px;
 	color: #1E90FF;
 }
 
 #network.disconnected {
     color: #f53c3c;
+}
+
+#pulseaudio.input {
+	padding: 0 8px;
+}
+
+#pulseaudio.input.source-muted {
+	padding: 0 4px;
+}
+
+#pulseaudio.output {
+	padding: 0 6px;
+}
+
+#pulseaudio.output.muted {
+	padding-left: 7px;
 }
 
 #pulseaudio.input,
