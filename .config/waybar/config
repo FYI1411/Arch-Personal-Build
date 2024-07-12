@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "custom/media"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["tray", "mpd", "pulseaudio", "network", "battery", "clock"],
+    "modules-right": ["tray", "mpd", "pulseaudio#output", "pulseaudio#input", "network", "battery", "clock"],
     // Modules configuration
 	"hyprland/workspaces": {
     	"format": "{icon}",
@@ -50,14 +50,12 @@
         "format-disconnected": "⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {format_source}",
+    "pulseaudio#output": {
+        "scroll-step": 1, // %, can be a float
+        "format": "{icon}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "",
-        "format-source-muted": "",
+        "format-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -67,8 +65,23 @@
             "car": "",
             "default": [" ", " ", " "]
         },
-        "on-click": "pavucontrol"
+        "on-click": "amixer -q set Master toggle && vol",
+		"on-click-middle": "pavucontrol",
+		"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +1% && vol",
+		"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -1% && vol",
     },
+	"pulseaudio#input": {
+		"format-source": "",
+		"format-source-muted": " ",
+		"format": "{format_source}",
+		"scroll-step": 1,
+		"smooth-scrolling-threshold": 1,
+		"max-volume": 100,
+		"on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+		"on-click-middle": "pavucontrol",
+		"on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
+		"on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%",
+	},
     "custom/media": {
         "format": "{icon} {}",
         "return-type": "json",

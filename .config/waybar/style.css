@@ -153,11 +153,13 @@ label:focus {
     color: #f53c3c;
 }
 
-#pulseaudio {
-	color: #1e90ff
+#pulseaudio.input,
+#pulseaudio.output {
+	color: #1e90ff;
 }
 
-#pulseaudio.muted {
+#pulseaudio.input.source-muted,
+#pulseaudio.output.muted {
     color: #808080;
 }
 
