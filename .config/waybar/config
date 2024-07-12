@@ -65,6 +65,7 @@
             "car": "",
             "default": [" ", " ", " "]
         },
+		"tooltip-format": "{volume}% {desc}",
         "on-click": "amixer -q set Master toggle && vol",
 		"on-click-middle": "pavucontrol",
 		"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +1% && vol",
@@ -77,6 +78,7 @@
 		"scroll-step": 1,
 		"smooth-scrolling-threshold": 1,
 		"max-volume": 100,
+		"tooltip": false,
 		"on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
 		"on-click-middle": "pavucontrol",
 		"on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
