@@ -1,16 +1,17 @@
 #! /bin/bash
 
-if [ "$1" == "-a" ]; then
-    comment = 'auto commit from gp command'
-else
-	echo 'Please type a comment: '
-	read comment
-fi
-
 git status
 
-if [[ $(git status | grep -c Changes) -ge 1 ]] then 
+if [[ $(git status | grep -c Changes) -ge 1 ]] then
+	if [ "$1" == "-a" ]; then
+		comment = 'auto commit from gp command'
+	else
+		echo 'Please type a comment: '
+		read comment
+	fi
 	git add -A && git commit -m "$comment" && git status
+else 
+	echo 'no'
 fi
 
 pass -c github && git push && git status
