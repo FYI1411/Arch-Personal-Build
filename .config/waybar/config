@@ -45,10 +45,10 @@
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "",
         "format-ethernet": "",
-        "tooltip-format": "{essid}via {gwaddr} ",
+        "tooltip-format": "{essid} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "format-alt": "{ifname}/{essid}: {ipaddr}/{cidr}",
 		"on-click-middle": "kitty wifi",
     },
     "pulseaudio#output": {
