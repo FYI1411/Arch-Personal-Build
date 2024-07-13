@@ -9,7 +9,7 @@ fi
 
 git status
 
-if [[ $(gs | grep -c Changes) -ge 1 ]] then 
+if [[ $(git status | grep -c Changes) -ge 1 ]] then 
 	git add -A && git commit -m "$comment" && git status
 fi
 
