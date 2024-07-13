@@ -10,8 +10,6 @@ if [[ $(git status | grep -c Changes) -ge 1 ]] then
 		read comment
 	fi
 	git add -A && git commit -m "$comment" && git status
-else 
-	echo 'no'
 fi
 
 pass -c github && git push && git status
