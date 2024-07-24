@@ -20,3 +20,14 @@ sed -i '/# %wheel ALL=(ALL:ALL) NOPASSWD/c\%wheel ALL=(ALL:ALL) NOPASSWD: ALL' $
 if [[ "$(grep -c 'Defaults passwd_timeout=' $file)" == 0 ]]; then
 	echo 'Defaults passwd_timeout=0' >> $file
 fi
+
+file='/etc/udev/rules.d/99-lowbat.rules'
+tee $file > /dev/null <<EOT
+# Suspend the system when battery level drops to 5% or lower
+SUBSYSTEM=="power_supply", ATTR{status}=="Discharging", ATTR{capacity}=="[0-5]", RUN+="/usr/bin/systemctl suspend"
+EOT
+
+file='/etc/udev/rules.d/backlight.rules'
+tee $file > /dev/null <<EOT
+ACTION=="add", SUBSYSTEM=="backlight", RUN+="/bin/chgrp video $sys$devpath/brightness", RUN+="/bin/chmod g+w $sys$devpath/brightness"
+EOT
