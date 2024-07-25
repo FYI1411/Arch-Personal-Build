@@ -50,6 +50,7 @@ debug.log
 .config/qutebrowser/*
 !.config/qutebrowser/config.py
 !.config/qutebrowser/quickmarks
+.config/kitty/kitty.conf.bak
 .aws
 .vscode
 .pulse-cookie
