@@ -2,7 +2,7 @@
 
 git status
 
-if [[ $(git status | grep -c Changes) -ge 1 ]] then
+if [[ $(git status | grep -Ec 'Changes|Untracked') -ge 1 ]] then
 	if [ "$1" == "-a" ]; then
 		comment='auto commit from gp command'
 	else
