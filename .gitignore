@@ -63,3 +63,4 @@ Games/*
 .wine
 Documents/
 nvidia-all/
+.docker
