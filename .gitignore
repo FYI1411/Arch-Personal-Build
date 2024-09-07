@@ -64,3 +64,4 @@ Games/*
 Documents/
 nvidia-all/
 .docker
+.pvpn-cli/
