@@ -86,7 +86,7 @@
 		"on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%",
 	},
     "custom/media": {
-        "format": "{icon} {}",
+        "format": "{icon} {text}",
         "return-type": "json",
         "max-length": 40,
         "format-icons": {
@@ -94,6 +94,6 @@
             "default": "🎜"
         },
         "escape": true,
-        "exec": "/usr/bin/python3 $HOME/.config/waybar/mediaplayer.py --player spotify"
+        "exec": "/usr/bin/python3 $HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null"
     },
 }
