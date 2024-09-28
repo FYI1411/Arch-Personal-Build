@@ -65,3 +65,4 @@ Documents/
 nvidia-all/
 .docker
 .pvpn-cli/
+.jupyter
