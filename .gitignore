@@ -66,3 +66,4 @@ nvidia-all/
 .docker
 .pvpn-cli/
 .jupyter
+explicit_filter.restore
