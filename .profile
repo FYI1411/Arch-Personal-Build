@@ -26,9 +26,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# So we don't have to write ~/.emacs.d/bin/doom every time
-PATH="$HOME/.emacs.d/bin:$PATH"
-
 # set config for powerline
 export XDG_CONFIG_HOME="${HOME}/.config"
 
