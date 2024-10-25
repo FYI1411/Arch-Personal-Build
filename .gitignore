@@ -67,3 +67,5 @@ nvidia-all/
 .pvpn-cli/
 .jupyter
 explicit_filter.restore
+.haven/
+.java/
