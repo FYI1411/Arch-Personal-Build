@@ -21,6 +21,7 @@ nvtop
 bluez
 bluez-utils
 dunst
+libnotify
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
