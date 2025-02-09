@@ -48,11 +48,10 @@ debug.log
 .config/spotify/
 .config/qBittorrent/
 .config/qutebrowser/*
+.config/Ryujinx
 !.config/qutebrowser/config.py
 !.config/qutebrowser/quickmarks
 .config/kitty/kitty.conf.bak
-.config/Gaijin
-.config/enlisted
 .aws
 .vscode
 .pulse-cookie
