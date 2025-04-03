@@ -69,3 +69,4 @@ explicit_filter.restore
 .haven/
 .java/
 .yarnrc
+.dotnet/
