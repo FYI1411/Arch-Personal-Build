@@ -70,3 +70,4 @@ explicit_filter.restore
 .java/
 .yarnrc
 .dotnet/
+.npm
