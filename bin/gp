@@ -12,4 +12,4 @@ if [[ $(git status | grep -Ec 'Changes|Untracked|push') -ge 1 ]] then
 	git add -A && git commit -m "$comment" && git status
 fi
 
-pass -c github && git push && git status
+pass -c github && echo "pass copied" && git push && git status
