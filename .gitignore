@@ -49,6 +49,8 @@ debug.log
 .config/qBittorrent/
 .config/qutebrowser/*
 .config/Ryujinx
+.config/calibre
+Calibre\ Library/ 
 !.config/qutebrowser/config.py
 !.config/qutebrowser/quickmarks
 .config/kitty/kitty.conf.bak
