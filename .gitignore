@@ -74,3 +74,6 @@ explicit_filter.restore
 .dotnet/
 .npm
 .julia
+.Rhistory
+.config/RStudio/
+.config/rstudio/
