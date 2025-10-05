@@ -79,3 +79,4 @@ explicit_filter.restore
 .config/rstudio/
 .Rproj.user
 .vscode-R/
+.config/unity3d/
