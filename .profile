@@ -30,5 +30,5 @@ fi
 export XDG_CONFIG_HOME="${HOME}/.config"
 
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-	exec Hyprland
+	exec start-hyprland
 fi
