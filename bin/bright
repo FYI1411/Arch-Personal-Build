@@ -11,6 +11,8 @@ if [ "$bright" == "" ]; then
 	else
 		bright="$max_bright"
 	fi
+elif [ "$bright" == "?" ]; then
+	echo $cur_bright $max_bright
 elif [ ${bright: -1} == '+' ]; then
 	bright=${bright::${#bright}-1}
 	bright=$(($bright + $cur_bright))
