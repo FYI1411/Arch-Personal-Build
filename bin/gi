@@ -1,0 +1,21 @@
+#! /bin/bash
+
+main() {
+    for path in "$@"; do
+        # Check if the line already exists to avoid duplicates
+        if ! grep -qxF $path ~/.gitignore; then
+            echo $path >> ~/.gitignore
+            echo "Added $path to .gitignore"
+        else
+            echo "$path already exists in .gitignore, skipping..."
+        fi
+    done
+}
+
+git status
+
+main "$@"
+
+git status
+
+git diff .gitignore
