@@ -21,18 +21,17 @@
 .pki
 .pip
 .anthy
-.rtorrent.session
-*.torrent
 .steam*
 Desktop/
 Downloads/*
-tmp/*
+tmp
 debug.log
 .config/pavucontrol.ini
 .config/pulse/
 .config/QtProject.conf
 .config/dconf/
 .config/ibus/
+.config/calibre
 .config/qutebrowser/*
 !.config/qutebrowser/config.py
 .config/cef_user_data/
@@ -48,8 +47,6 @@ debug.log
 .config/spotify/
 .config/qBittorrent/
 .config/qutebrowser/*
-.config/Ryujinx
-.config/calibre
 Calibre\ Library/ 
 !.config/qutebrowser/config.py
 !.config/qutebrowser/quickmarks
@@ -68,15 +65,6 @@ nvidia-all/
 .pvpn-cli/
 .jupyter
 explicit_filter.restore
-.haven/
 .java/
-.yarnrc
-.dotnet/
 .npm
-.julia
-.Rhistory
-.config/RStudio/
-.config/rstudio/
-.Rproj.user
 .vscode-R/
-.config/unity3d/

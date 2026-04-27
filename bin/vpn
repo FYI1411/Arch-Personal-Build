@@ -1,0 +1,14 @@
+#! /bin/bash
+# This script must be sourced from within a shell
+# and not executed. For instance with:
+# 
+# . path/to/that/script
+
+if [ "$1" == '-d' ]; then
+	wg-quick down "$2" && systemctl restart NetworkManager
+elif [ "$1" == '-o' ]; then
+	sudo openvpn --config "$2" --data-ciphers DEFAULT:AES-128-CBC
+else
+	sudo resolvconf -u
+	wg-quick up "$@"
+fi
