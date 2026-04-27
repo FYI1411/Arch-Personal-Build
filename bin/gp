@@ -2,14 +2,24 @@
 
 git status
 
-if [[ $(git status | grep -Ec 'Changes|Untracked|push') -ge 1 ]] then
-	if [ "$1" == "-a" ]; then
-		comment='auto commit from gp command'
-	else
-		echo 'Please type a comment: '
-		read comment
-	fi
-	git add -A && git commit -m "$comment" && git status
-fi
+main() {
+    # Check if there are changes
+    if [[ $(git status | grep -Ec 'Changes|Untracked|push') -lt 1 ]]; then
+        return
+    fi
+
+    if [ "$1" == "-a" ]; then
+        comment='auto commit from gp command'
+    elif [ "$1" == "-m" ]; then
+        return # Skip git commit and move to git push
+    else
+        echo 'Please type a comment: '
+        read comment
+    fi
+
+    git add -A && git commit -m "$comment" && git status
+}
+
+main "$@"
 
 pass -c github && echo "Pass copied" && git push && git status
