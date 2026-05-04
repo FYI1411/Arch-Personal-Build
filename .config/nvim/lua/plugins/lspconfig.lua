@@ -14,34 +14,37 @@ return {
 		end,
 	},
 	{
-		"neovim/nvim-lspconfig",
-		lazy = false,
-		config = function()
-			local lspconfig = require("lspconfig")
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-			lspconfig.lua_ls.setup({
-				settings = {
-					Lua = {
-						diagnostics = {
-							globals = { "vim" },
-						},
-					},
-				},
-			})
-			lspconfig.bashls.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.pyright.setup({
-				capabilities = capabilities,
-			})
-			lspconfig.clangd.setup({
-				capabilities = capabilities,
-			})
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
-		end,
-	},
+        "neovim/nvim-lspconfig",
+        lazy = false,
+        config = function()
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+            -- Lua setup
+            vim.lsp.config('lua_ls', {
+                capabilities = capabilities,
+                settings = {
+                    Lua = {
+                        diagnostics = {
+                            globals = { "vim" },
+                        },
+                    },
+                },
+            })
+            vim.lsp.enable('lua_ls')
+
+            -- Other servers
+            local servers = { "bashls", "pyright", "clangd" }
+            for _, server in ipairs(servers) do
+                vim.lsp.config(server, { capabilities = capabilities })
+                vim.lsp.enable(server)
+            end
+
+            -- Keymaps
+            vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+            vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
+            vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
+        end,
+    },
 	{
 		"jay-babu/mason-null-ls.nvim",
 		event = { "BufReadPre", "BufNewFile" },
