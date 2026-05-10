@@ -2,6 +2,8 @@ kitty
 wayland
 xorg-xwayland
 hyprland
+hyprlock
+hyprpaper
 waybar
 xdg-user-dirs
 alsa-utils
@@ -31,5 +33,4 @@ fcitx5-unikey
 fcitx5-anthy
 fuzzel
 cronie
-hyprlock
 openvpn

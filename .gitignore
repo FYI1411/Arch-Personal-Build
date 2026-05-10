@@ -68,3 +68,4 @@ explicit_filter.restore
 .java/
 .npm
 .vscode-R/
+.dotnet

@@ -13,13 +13,20 @@ if [[ ! -f "$wp_dir$last_wp" ]]; then
 fi
 
 main() {
-	pkill -9 -f $cmd  > /dev/null 2>&1
+	# This script toggles the wp if there's only 1
+	# Kill last wp if exist
+	pkill -9 -f $cmd  > /dev/null 2>&1 
+	killall hyprpaper > /dev/null 2>&1
 	if [[ $# -eq 0 ]]; then
+		# Loop multiple wps randomly
 		$cmd "$opt" '*' $(find ${wp_dir} -type f -wholename "*.mp4" \
-		! -wholename "*$last_wp" | shuf -n 1) > /dev/null 2>&1
+		! -wholename "*$last_wp" | shuf -n 1) > /dev/null 2>&1 
 	else
-		$cmd "$opt" '*' "$@" > /dev/null 2>&1
+		$cmd "$opt" '*' "$@" > /dev/null 2>&1 # Loop the wp
 	fi
+    if ! pgrep -x "mpvpaper" > /dev/null && ! pgrep -x "hyprpaper" > /dev/null; then
+        hyprpaper > /dev/null 2>&1
+    fi
 }
 
 main "$@"
