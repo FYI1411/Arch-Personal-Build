@@ -69,3 +69,5 @@ explicit_filter.restore
 .npm
 .vscode-R/
 .dotnet
+.copilot/
+.vscode-shared/
