@@ -13,7 +13,6 @@ pipewire-pulse
 pipewire-jack
 wireplumber
 lib32-pipewire
-noise-suppression-for-voice
 pavucontrol
 networkmanager
 wl-clipboard
