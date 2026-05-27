@@ -18,6 +18,7 @@ pipewire-jack
 wireplumber
 lib32-pipewire
 pavucontrol
+noise-suppression-for-voice
 networkmanager
 wl-clipboard
 xclip
