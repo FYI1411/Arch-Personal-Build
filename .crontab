@@ -29,5 +29,6 @@
 # │ │ │ │ │
 # │ │ │ │ │
 # * * * * *  command_to_execute
-30 8 * * *    find $TMP_FOLDER/ -mindepth 1 -maxdepth 1 -mtime +$MIN_DAYS -exec rm {} +
-*/5 * * * *   ~/bin/battery
+TMP_FOLDER=tmp
+MIN_DAYS=7
+30 8 * * *    find $TMP_FOLDER/ -mindepth 1 -maxdepth 1 -mtime +$MIN_DAYS -exec rm -rf {} +
