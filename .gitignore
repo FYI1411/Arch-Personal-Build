@@ -71,3 +71,6 @@ explicit_filter.restore
 .dotnet
 .copilot/
 .vscode-shared/
+.config/mimeapps.list
+.config/onlyoffice
+.config/Antigravity

@@ -22,7 +22,7 @@
   ],
   "modules-center": [
     "power-profiles-daemon",
-    "hyprland/workspaces",
+    "hyprland/workspaces"
   ],
   "modules-right": [
     "group/audio",
