@@ -2,6 +2,11 @@
 TMP_FOLDER="tmp"
 MIN_DAYS="7"
 
+if [[ $# -eq 0 ]]; then
+	echo "Usage: tmp [-c] [file...]"
+	exit 0
+fi
+
 if [[ ! -d ~/$TMP_FOLDER/ ]]; then
 	echo "can't find ~/$TMP_FOLDER/"
 	read -p "mkdir ~/$TMP_FOLDER/?[Y|n] " -n 1 -r $opt && echo
