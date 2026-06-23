@@ -1,5 +1,0 @@
-#/etc/NetworkManager/conf.d/dhcp-client.conf
-[main]
-dhcp=dhcpcd
-
-pacman -S dhcpcd
