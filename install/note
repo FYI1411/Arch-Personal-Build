@@ -24,3 +24,7 @@ fi
 file='/etc/udev/rules.d/backlight.rules'
 echo 'ACTION=="add", SUBSYSTEM=="backlight", RUN+="/bin/chgrp video $sys$devpath/brightness", RUN+="/bin/chmod g+w $sys$devpath/brightness"'\
 > $file
+
+file='/etc/locale.gen'
+sed -i '/^#en_US.UTF-8 UTF-8/s/^#//' $file
+locale-gen
