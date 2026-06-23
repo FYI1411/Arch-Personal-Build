@@ -10,3 +10,4 @@ nvidia-settings
 nvidia-utils
 opencl-nvidia
 egl-wayland
+linux-headers
