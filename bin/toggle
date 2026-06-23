@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Toggle waybar and live wallpaper (mpvpaper)
+if pgrep -x "waybar" > /dev/null || pgrep -x "mpvpaper" > /dev/null; then
+    killall waybar mpvpaper 2>/dev/null
+else
+    waybar > /dev/null 2>&1 &
+    livewp > /dev/null 2>&1 &
+fi
