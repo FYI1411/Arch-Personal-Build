@@ -11,6 +11,7 @@ extract () {
       *.tbz2)      tar xvjf $1    ;;
       *.tgz)       tar xvzf $1    ;;
       *.zip)       unzip $1       ;;
+	  *.7z)		   7z x $1		  ;;
       *)           echo "\`$1': unrecognized file compression" ;;
     esac
   else
