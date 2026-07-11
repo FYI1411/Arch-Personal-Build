@@ -8,6 +8,48 @@ if [ "$1" == '-d' ]; then
 	wg-quick down "$2" && systemctl restart NetworkManager
 elif [ "$1" == '-o' ]; then
 	sudo openvpn --config "$2" --data-ciphers DEFAULT:AES-128-CBC
+elif [ "$1" == '-g' ]; then
+	# VPNGate mode
+	if ! command -v vpngate &> /dev/null; then
+		echo "vpngate helper not found in PATH."
+		return 1
+	fi
+	
+	if [ "$2" == "list" ] || [ "$2" == "-l" ]; then
+		vpngate -l
+		return 0
+	elif [ "$2" == "select" ] || [ "$2" == "-s" ]; then
+		if command -v fzf &> /dev/null; then
+			selected=$(vpngate -l -n 0 | tail -n +5 | fzf --header="Select a VPN Server (Score, Ping, Speed)" --ansi)
+			if [ -n "$selected" ]; then
+				country=$(echo "$selected" | awk '{print $2}')
+				ip=$(echo "$selected" | awk '{print $3}')
+				vpngate --ip "$ip" --desc
+				country_upper=$(echo "$country" | tr '[:lower:]' '[:upper:]')
+				config_file="/home/pergon/Downloads/vpngate_${country_upper}_${ip}.ovpn"
+				sudo openvpn --config "$config_file" --data-ciphers DEFAULT:AES-128-CBC
+			else
+				echo "No server selected."
+			fi
+		else
+			vpngate -l
+			read -p "Enter server index to connect: " idx
+			if [[ "$idx" =~ ^[0-9]+$ ]]; then
+				vpngate -s "$idx"
+				sudo openvpn --config /home/pergon/Downloads/vpngate_active.ovpn --data-ciphers DEFAULT:AES-128-CBC
+			else
+				echo "Invalid index."
+			fi
+		fi
+	else
+		# Default: auto-select best server. Filter by country if $2 is provided.
+		if [ -n "$2" ]; then
+			vpngate -c "$2"
+		else
+			vpngate
+		fi
+		sudo openvpn --config /home/pergon/Downloads/vpngate_active.ovpn --data-ciphers DEFAULT:AES-128-CBC
+	fi
 else
 	sudo resolvconf -u
 	wg-quick up "$@"

@@ -1,0 +1,201 @@
+#!/usr/bin/env python3
+import urllib.request
+import csv
+import io
+import sys
+import base64
+import argparse
+
+# Colors for terminal output
+GREEN = "\033[92m"
+YELLOW = "\033[93m"
+RED = "\033[91m"
+BLUE = "\033[94m"
+BOLD = "\033[1m"
+RESET = "\033[0m"
+
+def fetch_servers():
+    url = "http://www.vpngate.net/api/iphone/"
+    print(f"{BLUE}Fetching VPN Gate server list from {url}...{RESET}")
+    try:
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+        with urllib.request.urlopen(req, timeout=10) as response:
+            data = response.read().decode('utf-8')
+        return data
+    except Exception as e:
+        print(f"{RED}Error fetching server list: {e}{RESET}")
+        sys.exit(1)
+
+def parse_servers(csv_data):
+    lines = csv_data.strip().split('\n')
+    if not lines:
+        print(f"{RED}Empty response from VPN Gate{RESET}")
+        sys.exit(1)
+    
+    # VPNGate API starts with *vpn_servers on the first line
+    if lines[0].startswith('*vpn_servers'):
+        lines = lines[1:]
+    
+    # Use csv reader to parse
+    f = io.StringIO('\n'.join(lines))
+    reader = csv.reader(f)
+    try:
+        header = next(reader)
+    except StopIteration:
+        print(f"{RED}No header row found in CSV{RESET}")
+        sys.exit(1)
+        
+    servers = []
+    for row in reader:
+        if not row or row[0] == '*':
+            continue
+        if len(row) < 15:
+            continue
+        
+        try:
+            score = int(row[2]) if row[2] else 0
+            ping = int(row[3]) if row[3] else 9999
+            speed = int(row[4]) if row[4] else 0
+            country_long = row[5]
+            country_short = row[6]
+            config_b64 = row[14]
+            ip = row[1]
+            hostname = row[0]
+            
+            servers.append({
+                'hostname': hostname,
+                'ip': ip,
+                'score': score,
+                'ping': ping,
+                'speed': speed,
+                'country_long': country_long,
+                'country_short': country_short,
+                'config_b64': config_b64
+            })
+        except ValueError:
+            continue
+            
+    return servers
+
+def print_servers(servers, limit=15):
+    print(f"\n{BOLD}{'Index':<6} {'Country':<10} {'IP Address':<15} {'Ping (ms)':<10} {'Speed (Mbps)':<12} {'Score':<10}{RESET}")
+    print("-" * 70)
+    # If limit is 0 or less, display all servers
+    display_servers = servers if limit <= 0 else servers[:limit]
+    for i, s in enumerate(display_servers):
+        speed_mbps = s['speed'] / 10**6
+        ping_str = f"{s['ping']}" if s['ping'] != 9999 else "N/A"
+        print(f"{i:<6} {s['country_short']:<10} {s['ip']:<15} {ping_str:<10} {speed_mbps:<12.2f} {s['score']:<10}")
+
+def main():
+    parser = argparse.ArgumentParser(description="VPN Gate client helper to fetch and save OpenVPN profiles.")
+    parser.add_argument("-l", "--list", action="store_true", help="List active VPN servers")
+    parser.add_argument("-c", "--country", type=str, help="Filter servers by 2-letter country code (e.g., JP, US, KR)")
+    parser.add_argument("-p", "--proto", choices=["udp", "tcp"], help="Filter by protocol (udp or tcp)")
+    parser.add_argument("-s", "--select", type=int, help="Select a server by list index to download")
+    parser.add_argument("-i", "--ip", type=str, help="Select a server by IP address to download")
+    parser.add_argument("-o", "--output", type=str, help="Output .ovpn file path or directory. If directory or omitted, saves as vpngate_<country>_<ip>.ovpn")
+    parser.add_argument("-d", "--desc", action="store_true", help="Save with descriptive name vpngate_<country>_<ip>.ovpn instead of vpngate_active.ovpn")
+    parser.add_argument("-n", "--limit", type=int, default=15, help="Number of servers to list (default: 15)")
+    args = parser.parse_args()
+
+    csv_data = fetch_servers()
+    servers = parse_servers(csv_data)
+    
+    # Apply country filter
+    if args.country:
+        country_upper = args.country.upper()
+        servers = [s for s in servers if s['country_short'].upper() == country_upper]
+        if not servers:
+            print(f"{YELLOW}No servers found for country code '{country_upper}'{RESET}")
+            sys.exit(0)
+
+    # Filter by protocol
+    if args.proto:
+        filtered_servers = []
+        proto_lower = args.proto.lower()
+        for s in servers:
+            try:
+                decoded = base64.b64decode(s['config_b64']).decode('utf-8', errors='ignore')
+                decoded_lower = decoded.lower()
+                if proto_lower == 'udp':
+                    has_proto = ('proto udp' in decoded_lower) or ('proto udp4' in decoded_lower)
+                elif proto_lower == 'tcp':
+                    has_proto = ('proto tcp' in decoded_lower) or ('proto tcp-client' in decoded_lower) or ('proto tcp4' in decoded_lower)
+                else:
+                    has_proto = False
+                
+                if has_proto:
+                    filtered_servers.append(s)
+            except Exception:
+                continue
+        servers = filtered_servers
+        if not servers:
+            print(f"{YELLOW}No servers found with protocol '{proto_lower}'{RESET}")
+            sys.exit(0)
+
+    # Sort servers: highest score first, then lowest ping
+    servers.sort(key=lambda x: (-x['score'], x['ping']))
+
+    if args.list:
+        print_servers(servers, limit=args.limit)
+        print(f"\nTo select a specific server, run: {BOLD}vpngate -s <index>{RESET}")
+        if args.country:
+            print(f"Make sure to keep the same country filter: {BOLD}vpngate -c {args.country} -s <index>{RESET}")
+        return
+
+    # Select the server
+    if args.ip:
+        matched = [s for s in servers if s['ip'] == args.ip]
+        if not matched:
+            print(f"{RED}No server found with IP '{args.ip}'{RESET}")
+            sys.exit(1)
+        selected_server = matched[0]
+    elif args.select is not None:
+        if args.select < 0 or args.select >= len(servers):
+            print(f"{RED}Invalid index. Must be between 0 and {len(servers)-1}{RESET}")
+            sys.exit(1)
+        selected_server = servers[args.select]
+    else:
+        # Otherwise, pick the top server (highest score, lowest ping)
+        selected_server = servers[0]
+        print(f"{GREEN}Automatically selected the best server:{RESET}")
+        print_servers([selected_server], limit=1)
+
+    # Determine the output path
+    import os
+    country = selected_server['country_short'].upper()
+    ip = selected_server['ip']
+    descriptive_name = f"vpngate_{country}_{ip}.ovpn"
+    
+    if args.output:
+        if os.path.isdir(args.output):
+            output_path = os.path.join(args.output, descriptive_name)
+        else:
+            output_path = args.output
+    else:
+        if args.desc:
+            output_path = os.path.join("/home/pergon/Downloads", descriptive_name)
+        else:
+            output_path = "/home/pergon/Downloads/vpngate_active.ovpn"
+
+    # Decode and save the configuration
+    try:
+        decoded_config = base64.b64decode(selected_server['config_b64']).decode('utf-8')
+        with open(output_path, 'w') as f:
+            f.write(decoded_config)
+        print(f"\n{GREEN}Success! OpenVPN configuration saved to: {output_path}{RESET}")
+        print(f"Server Info:")
+        print(f"  Country:      {selected_server['country_long']} ({selected_server['country_short']})")
+        print(f"  IP Address:   {selected_server['ip']}")
+        print(f"  Ping:         {selected_server['ping']} ms")
+        print(f"  Speed:        {selected_server['speed'] / 10**6:.2f} Mbps")
+        print(f"  Score:        {selected_server['score']}")
+        print(f"\nTo connect to this VPN, run:\n  {BOLD}vpn -o {output_path}{RESET}")
+
+    except Exception as e:
+        print(f"{RED}Failed to decode or write configuration: {e}{RESET}")
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main()
