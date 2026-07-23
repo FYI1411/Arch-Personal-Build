@@ -9,7 +9,6 @@ if [ "$1" == '-d' ]; then
 elif [ "$1" == '-o' ]; then
 	sudo openvpn --config "$2" --data-ciphers DEFAULT:AES-128-CBC
 elif [ "$1" == '-g' ]; then
-	# VPNGate mode
 	if ! command -v vpngate &> /dev/null; then
 		echo "vpngate helper not found in PATH."
 		return 1
@@ -28,6 +27,7 @@ elif [ "$1" == '-g' ]; then
 				country_upper=$(echo "$country" | tr '[:lower:]' '[:upper:]')
 				config_file="/home/pergon/Downloads/vpngate_${country_upper}_${ip}.ovpn"
 				sudo openvpn --config "$config_file" --data-ciphers DEFAULT:AES-128-CBC
+				rm $config_file && echo "Removed: $config_file"
 			else
 				echo "No server selected."
 			fi
