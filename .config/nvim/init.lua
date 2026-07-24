@@ -4,7 +4,7 @@ vim.opt.clipboard="unnamed,unnamedplus"
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
-vim.expandtab = true
+vim.opt.expandtab = true
 --maps
 vim.g.mapleader = " "
 vim.keymap.set("i", "jj", "<Esc>")
