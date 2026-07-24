@@ -22,6 +22,28 @@ return {
             -- Lua setup
             vim.lsp.config('lua_ls', {
                 capabilities = capabilities,
+                root_dir = function(bufnr, on_dir)
+                    local fname = vim.api.nvim_buf_get_name(bufnr)
+                    local root = vim.fs.root(fname, {
+                        ".luarc.json", ".luarc.jsonc", ".git"
+                    })
+                    local home = vim.uv.os_homedir()
+                    if root == home then
+                        -- If editing Neovim config, set the root to the config directory
+                        local nvim_config = home .. "/.config/nvim"
+                        if fname:sub(1, #nvim_config) == nvim_config then
+                            on_dir(nvim_config)
+                        else
+                            -- Fallback to the file's parent directory if it's not the home dir itself
+                            local file_dir = vim.fs.dirname(fname)
+                            if file_dir and file_dir ~= home then
+                                on_dir(file_dir)
+                            end
+                        end
+                    elseif root then
+                        on_dir(root)
+                    end
+                end,
                 settings = {
                     Lua = {
                         diagnostics = {
