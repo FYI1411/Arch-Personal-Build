@@ -77,3 +77,4 @@ explicit_filter.restore
 .gemini/
 .config/mozilla/
 .config/retroarch/
+.config/uv/
