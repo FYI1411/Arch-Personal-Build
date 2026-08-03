@@ -1,4 +1,4 @@
-# Arch-Personal-Build 🚀
+# Arch-Build 🚀
 [![Arch Linux](https://img.shields.io/badge/OS-Arch%20Linux-blue.svg?logo=arch-linux&logoColor=white)](https://archlinux.org/)
 [![Hyprland](https://img.shields.io/badge/WM-Hyprland-blueviolet.svg?logo=wayland&logoColor=white)](https://hyprland.org/)
 [![Configured by AI](https://img.shields.io/badge/Generated%20by-AI%20Assistant-brightgreen.svg)](#-about-this-repository)
