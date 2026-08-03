@@ -5,6 +5,7 @@
 
 > [!NOTE]
 > **AI-Generated Repository Documentation**
+> This Repo was written by a human with only some AI help for bash scripting :))
 > This README has been fully structured, documented, and written by **Antigravity**, an AI assistant. It provides an automated, precise overview of the personal configuration files, helper scripts, and installation guides in this repository.
 
 Welcome to the **Arch-Personal-Build** repository! This is a complete, custom-tailored desktop environment configuration (dotfiles) and system setup guide for **Arch Linux**, built on the **Hyprland** Wayland compositor. It is specially tuned for an **ASUS ROG** laptop utilizing a hybrid **AMD + NVIDIA** dual-GPU configuration.
