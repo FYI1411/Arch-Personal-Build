@@ -78,3 +78,7 @@ explicit_filter.restore
 .config/mozilla/
 .config/retroarch/
 .config/uv/
+skills-lock.json
+.agents/
+.pixi/
+test*

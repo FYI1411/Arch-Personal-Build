@@ -282,9 +282,9 @@ hl.bind(mainMod .. " + " .. "F1", hl.dsp.exec_cmd("pactl set-sink-volume @DEFAUL
 
 -- Set max vol to 100%
 
-hl.bind("F2", hl.dsp.exec_cmd("pactl set-sink-volume @DEFAULT_SINK@ -1% && vol"))
+hl.bind("F2", hl.dsp.exec_cmd("pactl set-sink-volume @DEFAULT_SINK@ -1% && vol"), { repeating = true })
 
-hl.bind("F3", hl.dsp.exec_cmd("pactl set-sink-volume @DEFAULT_SINK@ +1% && vol"))
+hl.bind("F3", hl.dsp.exec_cmd("pactl set-sink-volume @DEFAULT_SINK@ +1% && vol"), { repeating = true })
 
 hl.bind("F4", hl.dsp.exec_cmd("amixer set Capture toggle"))
 
