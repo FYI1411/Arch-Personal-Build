@@ -82,3 +82,4 @@ skills-lock.json
 .agents/
 .pixi/
 test*
+.config/unity3d/
